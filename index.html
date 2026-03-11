@@ -50,6 +50,22 @@
             font-size: 1.5rem;
             margin-bottom: 15px;
         }
+        .project-desc, .project-fix, .project-explain {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .project-explain {
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 3px solid #0066cc;
+        }
+        .project-fix {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 3px solid #ffc107;
+        }
         .iframe-container {
             margin-top: 15px;
             padding: 15px;
@@ -80,22 +96,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>RESUME MATERI CONSTRUCTOR DALAM PEMROGRAMAN DART</h1>
-        
-        <!-- Tambahan Header Profil -->
+        <h1>IMPLEMENTASI CONSTRUCTOR DAN ENKAPSULASI PADA PEMROGRAMAN DART</h1>
+
+        <!-- Profil -->
         <div class="profile-header">
             <p><strong>Nama</strong> : Yoza Ulpia Rafila</p>
             <p><strong>NIM</strong> : 251410004</p>
             <p><strong>Kelas</strong> : SI2A</p>
-            <p><strong>Judul</strong> : Implementasi Berbagai Jenis Constructor pada Bahasa Pemrograman Dart</p>
+            <p><strong>Judul</strong> : Pembelajaran Konsep Constructor dan Enkapsulasi Melalui Implementasi Berbagai Kelas dalam Dart</p>
         </div>
 
         <!-- Proyek 1: Kelas Buku -->
         <div class="project-section">
             <div class="project-title">1. Kelas Buku</div>
-            <p><strong>Pengertian:</strong> Contoh penggunaan parameterized constructor untuk menginisialisasi judul buku. Parameterized constructor memungkinkan pengisian nilai atribut objek secara langsung pada saat pembuatan objek, sehingga nilai judul buku dapat ditentukan sesuai kebutuhan tanpa perlu mengubahnya secara terpisah setelah objek dibuat.</p>
+            <div class="project-explain">
+                <strong>Penjelasan Kelas:</strong> Kelas ini dibuat untuk merepresentasikan objek buku dengan atribut <code>judul</code>. Menggunakan <strong>parameterized constructor</strong> yang menerima nilai judul saat objek dibuat, sehingga nilai judul langsung terinisialisasi. Atribut <code>judul</code> pada awalnya ditulis tanpa spasi dengan tipe data (<code>classBuku</code>, <code>Stringjudul</code>) yang merupakan kesalahan sintaks, namun kode sudah lengkap dengan fungsi <code>main()</code> untuk membuat objek dan menampilkan judul buku.
+            </div>
+            <div class="project-fix">
+                <strong>Perbaikan yang Dibutuhkan:</strong> Hapus spasi yang tidak perlu pada penulisan kelas dan atribut, ubah menjadi <code>class Buku</code> dan <code>String judul</code>. Setelah diperbaiki, program akan menampilkan "Judul Buku: Pemrograman Dart untuk Pemula".
+            </div>
             <div class="iframe-container">
-                <p><strong>Hasil Program Auto-Run:</strong></p>
+                <p><strong>Hasil Program Setelah Diperbaiki:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=056d061cc804d29d607438659ed9a9c3&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
@@ -103,7 +124,18 @@
         <!-- Proyek 2: Kelas Mobil -->
         <div class="project-section">
             <div class="project-title">2. Kelas Mobil</div>
-            <p><strong>Pengertian:</strong> Implementasi parameterized constructor dan named constructor (baru() & dariJson()). Parameterized constructor digunakan untuk membuat objek mobil dengan nilai merk dan tahun yang ditentukan langsung. Named constructor memberikan fleksibilitas tambahan, di mana constructor baru() membuat objek dengan nilai default (Toyota tahun 2023), sedangkan constructor dariJson() membuat objek dari data yang disimpan dalam bentuk map, sehingga memudahkan pengolahan data dari sumber eksternal seperti file atau API.</p>
+            <div class="project-explain">
+                <strong>Penjelasan Kelas:</strong> Kelas ini memiliki atribut <code>merk</code> dan <code>tahun</code>, dengan implementasi tiga jenis constructor:
+                <ul>
+                    <li><strong>Parameterized Constructor</strong>: Menerima nilai merk dan tahun saat objek dibuat.</li>
+                    <li><strong>Named Constructor <code>baru()</code></strong>: Membuat objek dengan nilai default (merk Toyota, tahun 2023).</li>
+                    <li><strong>Named Constructor <code>dariJson()</code></strong>: Membuat objek dari data berupa <code>Map</code>, memudahkan pengolahan data dari sumber eksternal.</li>
+                </ul>
+                Method <code>toString()</code> dioverride untuk menampilkan detail objek dengan format yang jelas.
+            </div>
+            <div class="project-fix">
+                <strong>Status:</strong> Kode sudah benar dan lengkap, berjalan dengan baik. Menampilkan detail tiga objek mobil dengan nilai berbeda.
+            </div>
             <div class="iframe-container">
                 <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=eaa6e952fc5325681f67ce2bcd308aad&split=60&theme=dark&run=true"></iframe>
@@ -113,7 +145,12 @@
         <!-- Proyek 3: Kelas Warna -->
         <div class="project-section">
             <div class="project-title">3. Kelas Warna</div>
-            <p><strong>Pengertian:</strong> Contoh constant constructor untuk membuat objek immutable dengan nilai RGB. Constant constructor digunakan bersama dengan keyword 'const' dan atribut 'final' untuk memastikan nilai objek tidak dapat diubah setelah dibuat. Hal ini sangat berguna untuk data yang harus tetap konsisten dan tidak berubah selama berjalannya program, seperti nilai kode warna standar.</p>
+            <div class="project-explain">
+                <strong>Penjelasan Kelas:</strong> Kelas ini merepresentasikan warna dengan nilai RGB, menggunakan <strong>constant constructor</strong> yang ditandai dengan keyword <code>const</code>. Atribut <code>r</code>, <code>g</code>, <code>b</code> ditandai sebagai <code>final</code> sehingga objek menjadi <strong>immutable</strong> (nilai tidak dapat diubah setelah dibuat). Method <code>toString()</code> dioverride untuk menampilkan nilai RGB dengan format yang jelas.
+            </div>
+            <div class="project-fix">
+                <strong>Status:</strong> Kode sudah benar dan lengkap, berjalan dengan baik. Menampilkan detail nilai RGB untuk warna merah (255,0,0) dan biru (0,0,255).
+            </div>
             <div class="iframe-container">
                 <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=f5759a3a30cb612f0b8cd549cd88c081&split=60&theme=dark&run=true"></iframe>
@@ -123,19 +160,99 @@
         <!-- Proyek 4: Kelas Titik -->
         <div class="project-section">
             <div class="project-title">4. Kelas Titik</div>
-            <p><strong>Pengertian:</strong> Implementasi constructor dengan initializer list untuk mengubah nilai negatif menjadi positif. Initializer list memungkinkan proses pengolahan nilai atribut sebelum bagian body constructor dijalankan. Dalam kasus ini, fungsi abs() digunakan untuk memastikan koordinat x dan y selalu bernilai positif, sehingga menghindari data tidak valid pada objek titik yang dibuat.</p>
+            <div class="project-explain">
+                <strong>Penjelasan Kelas:</strong> Kelas ini merepresentasikan titik pada bidang kartesian dengan atribut <code>x</code> dan <code>y</code>. Menggunakan <strong>constructor dengan initializer list</strong> untuk memproses nilai sebelum objek dibuat, di mana fungsi <code>abs()</code> digunakan untuk mengubah nilai koordinat negatif menjadi positif. Atribut <code>x</code> dan <code>y</code> ditandai sebagai <code>final</code> sehingga nilainya tidak dapat diubah setelah objek dibuat.
+            </div>
+            <div class="project-fix">
+                <strong>Status:</strong> Kode sudah benar dan lengkap, berjalan dengan baik. Menampilkan pesan "Titik dibuat di (5.5, 10.2)" dan "Titik dibuat di (3.8, 7.1)" untuk input nilai negatif.
+            </div>
             <div class="iframe-container">
                 <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=9d9b0215d693fc33074424a4e58b8702&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Tambahan Kesimpulan -->
-        <div class="conclusion">
-            <h2>KESIMPULAN</h2>
-            <p>Dalam pemrograman berorientasi objek menggunakan Dart, constructor memiliki peran penting dalam menginisialisasi objek dengan cara yang sesuai kebutuhan. Pada proyek yang dibuat oleh Yoza Ulpia Rafila (NIM 251410004, Kelas SI2A), telah berhasil diimplementasikan berbagai jenis constructor yaitu parameterized constructor, named constructor, constant constructor, dan constructor dengan initializer list.</p>
-            <p>Masing-masing jenis constructor memiliki fungsi dan keunggulan tersendiri: parameterized constructor untuk inisialisasi langsung nilai atribut, named constructor untuk variasi pembuatan objek, constant constructor untuk objek dengan nilai tetap, dan initializer list untuk memproses nilai sebelum objek benar-benar dibuat. Dengan memahami dan menerapkan berbagai jenis constructor ini, dapat dibuat program yang lebih terstruktur, fleksibel, dan dapat menjaga konsistensi data objek yang dibuat.</p>
+        <!-- Proyek 5: Kelas Mahasiswa -->
+        <div class="project-section">
+            <div class="project-title">5. Kelas Mahasiswa</div>
+            <div class="project-explain">
+                <strong>Penjelasan Kelas:</strong> Kelas ini memiliki atribut <code>nama</code>, <code>nim</code>, <code>jurusan</code>, dan <code>kelas</code>, dengan implementasi tiga jenis constructor:
+                <ul>
+                    <li><strong>Default Constructor</strong>: Tanpa parameter, nilai atribut diatur setelah objek dibuat.</li>
+                    <li><strong>Named Constructor <code>dariMap()</code></strong>: Membuat objek dari data berupa <code>Map</code>, memudahkan pengolahan data dari sumber eksternal.</li>
+                    <li><strong>Named Constructor <code>tanpaNama()</code></strong>: Membuat objek dengan nilai default untuk semua atribut.</li>
+                </ul>
+                Method <code>tampilData()</code> digunakan untuk menampilkan detail data mahasiswa dengan format terstruktur.
+            </div>
+            <div class="project-fix">
+                <strong>Status:</strong> Kode sudah benar dan lengkap, berjalan dengan baik. Menampilkan data tiga mahasiswa dengan cara pembuatan objek yang berbeda.
+            </div>
+            <div class="iframe-container">
+                <p><strong>Hasil Program Auto-Run:</strong></p>
+                <iframe src="https://dartpad.dev/embed-dart.html?id=8c6acae69db363da2503c843832d411a&split=60&theme=dark&run=true"></iframe>
+            </div>
         </div>
-    </div>
-</body>
-</html>
+
+        <!-- Proyek 6: Kelas Person -->
+        <div class="project-section">
+            <div class="project-title">6. Kelas Person</div>
+            <div class="project-explain">
+                <strong>Penjelasan Kelas:</strong> Kelas ini menerapkan konsep <strong>enkapsulasi</strong> dengan atribut <code>_name</code> yang bersifat private (ditandai dengan garis bawah awal). Terdapat getter (<code>nama</code> dan <code>getName()</code>) dan setter (<code>nama</code> dan <code>setName()</code>) untuk mengakses dan mengubah nilai atribut private. Constructor menerima nilai <code>_name</code> dan <code>age</code> saat objek dibuat.
+            </div>
+            <div class="project-fix">
+                <strong>Status:</strong> Kode sudah benar dan lengkap, berjalan dengan baik. Menampilkan perubahan nama objek melalui berbagai cara akses (getter dan metode tambahan).
+            </div>
+            <div class="iframe-container">
+                <p><strong>Hasil Program Auto-Run:</strong></p>
+                <iframe src="https://dartpad.dev/embed-dart.html?id=102fa38e3de419aa9ee98b46a6f9b45b&split=60&theme=dark&run=true"></iframe>
+            </div>
+        </div>
+
+        <!-- Proyek 7: Kelas Produk -->
+        <div class="project-section">
+            <div class="project-title">7. Kelas Produk</div>
+            <div class="project-explain">
+                <strong>Penjelasan Kelas:</strong> Kelas ini menerapkan enkapsulasi dengan atribut private <code>_nama</code> dan <code>_harga</code>. Setter untuk atribut memiliki validasi:
+                <ul>
+                    <li>Nama produk minimal 3 karakter.</li>
+                    <li>Harga produk harus lebih besar dari 0.</li>
+                </ul>
+                Jika validasi tidak terpenuhi, akan menampilkan pesan error. Getter disediakan untuk mengakses nilai atribut.
+            </div>
+            <div class="project-fix">
+                <strong>Perbaikan yang Dibutuhkan:</strong> Operator <code>>   =</code> memiliki spasi yang tidak perlu, ubah menjadi <code>>=</code>. Setelah diperbaiki, pesan error akan muncul saat input tidak memenuhi syarat, dan pesan sukses saat input valid.
+            </div>
+            <div class="iframe-container">
+                <p><strong>Hasil Program Setelah Diperbaiki:</strong></p>
+                <iframe src="https://dartpad.dev/embed-dart.html?id=39aa53c68684946d3f684c9ec5dde5ed&split=60&theme=dark&run=true"></iframe>
+            </div>
+        </div>
+
+        <!-- Proyek 8: Kelas User -->
+        <div class="project-section">
+            <div class="project-title">8. Kelas User</div>
+            <div class="project-explain">
+                <strong>Penjelasan Kelas:</strong> Kelas ini menerapkan enkapsulasi dengan atribut private <code>_username</code>, <code>_password</code>, dan <code>_email</code>. Setter memiliki validasi lengkap:
+                <ul>
+                    <li>Username minimal 5 karakter.</li>
+                    <li>Password minimal 8 karakter.</li>
+                    <li>Email harus mengandung simbol <code>@</code>.</li>
+                </ul>
+                Dilengkapi dengan metode <code>login()</code> untuk memverifikasi kredensial dan <code>gantiPassword()</code> untuk mengubah password dengan validasi tambahan.
+            </div>
+            <div class="project-fix">
+                <strong>Perbaikan yang Dibutuhkan:</strong> Operator <code>>   =</code> ubah menjadi <code>>=</code>, dan lengkapi bagian kode yang terpotong pada setter email. Setelah diperbaiki, program akan menampilkan hasil login yang sesuai dan pesan validasi saat mengubah data user.
+            </div>
+            <div class="iframe-container">
+                <p><strong>Hasil Program Setelah Diperbaiki:</strong></p>
+                <iframe src="https://dartpad.dev/embed-dart.html?id=30d6287a075646af8cea033b32f90137&split=60&theme=dark&run=true"></iframe>
+            </div>
+        </div>
+
+        <!-- Proyek 9: Kelas RekeningBank -->
+        <div class="project-section">
+            <div class="project-title">9. Kelas RekeningBank</div>
+            <div class="project-explain">
+                <strong>Penjelasan Kelas:</strong> Kelas ini menerapkan enkapsulasi untuk mengelola data rekening bank dengan atribut private <code>_nomorRekening</code>, <code>_saldo</code>, dan <code>_p
+
+File terlalu panjang. Cici hanya membaca 32% pertama.
