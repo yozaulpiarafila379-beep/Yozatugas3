@@ -79,114 +79,204 @@
     <div class="container">
         <!-- IDENTITAS MAHASISWA -->
         <div class="identitas">
-            <h1>📋 RESUME MATERI SESI 2: CONSTRUCTOR & ENKAPSULASI</h1>
-            <p><strong>Nama        :</strong> Yoza Ulpia Rafila</p>
-            <p><strong>NIM         :</strong> 251410004</p>
-            <p><strong>Kelas       :</strong> SI2A</p>
+            <h1>RESUME & SOURCE CODE TUGAS SESI 2 DART</h1>
+            <p><strong>Nama:</strong> Yoza Ulpia Rafila</p>
+            <p><strong>NIM:</strong> 251410004</p>
+            <p><strong>Kelas:</strong> SI2A</p>
         </div>
 
 
-        <!-- 1. PENGERTIAN CONSTRUCTOR -->
-        <h2>1. PENGERTIAN CONSTRUCTOR</h2>
-        <p>Constructor adalah metode khusus dalam kelas yang digunakan untuk menginisialisasi objek saat dibuat. Di Dart, constructor tidak memiliki tipe kembalian dan nama sama dengan nama kelasnya.</p>
-
-
-        <!-- 2. JENIS-JENIS CONSTRUCTOR -->
-        <h2>2. JENIS-JENIS CONSTRUCTOR</h2>
+        <!-- BAGIAN 1: RESUME MATERI -->
+        <h2>1. Resume Materi Constructor & Enkapsulasi</h2>
+        
+        <h3>1.1 Pengertian Constructor</h3>
+        <p>Constructor adalah metode khusus dalam kelas yang digunakan untuk menginisialisasi objek saat dibuat. Nama constructor sama dengan nama kelas dan tidak memiliki tipe kembalian.</p>
+        
+        <h3>1.2 Jenis-Jenis Constructor</h3>
         <ul>
-            <li><strong>Default Constructor:</strong> Constructor tanpa parameter (otomatis dibuat jika tidak ada constructor lain). Contoh: <code>Mahasiswa();</code></li>
-            <li><strong>Parameterized Constructor:</strong> Constructor dengan parameter untuk mengisi nilai atribut langsung. Contoh: <code>Mobil(this.merk, this.tahun);</code></li>
-            <li><strong>Named Constructor:</strong> Constructor dengan nama khusus untuk membuat objek dengan cara berbeda. Contoh: <code>Mahasiswa.dariMap(data);</code></li>
-            <li><strong>Constant Constructor:</strong> Digunakan untuk membuat objek immutable dengan keyword <code>const</code>. Contoh: <code>const Warna(255, 0, 0);</code></li>
-            <li><strong>Constructor dengan Initializer List:</strong> Menginisialisasi atribut sebelum body constructor dijalankan. Contoh: <code>Titik(double x, double y) : x = x.abs(), y = y.abs();</code></li>
+            <li><strong>Default Constructor:</strong> Constructor tanpa parameter, dibuat secara otomatis jika tidak ada constructor lain.</li>
+            <li><strong>Parameterized Constructor:</strong> Constructor dengan parameter untuk mengisi nilai atribut langsung.</li>
+            <li><strong>Named Constructor:</strong> Constructor dengan nama khusus untuk membuat objek dengan cara berbeda.</li>
+            <li><strong>Constant Constructor:</strong> Digunakan untuk membuat objek immutable (nilai tidak bisa diubah) dengan keyword <code>const</code>.</li>
+            <li><strong>Constructor dengan Initializer List:</strong> Menginisialisasi atribut sebelum body constructor dijalankan.</li>
+        </ul>
+        
+        <h3>1.3 Pengertian Enkapsulasi</h3>
+        <p>Enkapsulasi adalah konsep menyembunyikan data dengan membuat atribut menjadi private (awalan <code>_</code>), lalu mengatur aksesnya melalui getter dan setter.</p>
+        
+        <h3>1.4 Komponen Enkapsulasi</h3>
+        <ul>
+            <li><strong>Atribut Private:</strong> Tidak bisa diakses langsung dari luar kelas.</li>
+            <li><strong>Getter:</strong> Metode untuk membaca nilai atribut private.</li>
+            <li><strong>Setter:</strong> Metode untuk mengubah nilai atribut private dengan validasi.</li>
         </ul>
 
 
-        <!-- 3. SOURCE CODE KELAS DART -->
-        <h2>3. SOURCE CODE KELAS DART</h2>
-
-        <!-- 3.1 Kelas Car (Dari DartPad ID 1) -->
-        <h3>3.1 Kelas Car</h3>
+        <!-- BAGIAN 2: SOURCE CODE KELAS -->
+        <h2>2. Source Code Kelas Dart</h2>
+        
+        <h3>2.1 Kelas Mahasiswa</h3>
         <pre>
 // Nama        : Yoza Ulpia Rafila
 // NIM         : 251410004
 // Kelas       : SI2A
 
-class Car{
-  String? model;
-  String? color;
-  void start() {
-    print('Car started!');
+class Mahasiswa {
+  String? nama;
+  int? nim;
+  String? jurusan;
+  String? kelas;
+
+  // Constructor Default
+  Mahasiswa();
+
+  // Named Constructor dariMap
+  Mahasiswa.dariMap(Map<String, dynamic> data) {
+    nama = data['nama'];
+    nim = data['nim'];
+    jurusan = data['jurusan'];
+    kelas = data['kelas'];
   }
-  void stop() {
-    print('Car stopped!');
+
+  // Named Constructor tanpaNama
+  Mahasiswa.tanpaNama() {
+    nama = "Tanpa Nama";
+    nim = 00000000;
+    jurusan = "Tidak Diketahui";
+    kelas = "Tidak Diketahui";
+  }
+
+  void tampilData() {
+    print("=== DATA MAHASISWA ===");
+    print("Nama    : $nama");
+    print("NIM     : $nim");
+    print("Jurusan : $jurusan");
+    print("Kelas   : $kelas\n");
   }
 }
 
 void main() {
-  Car myCar = Car();
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  myCar.start();
-  myCar.stop();
+  // Objek dari Default Constructor
+  Mahasiswa mhs1 = Mahasiswa();
+  mhs1.nama = "Yoza Ulpia Rafila";
+  mhs1.nim = 251410004;
+  mhs1.jurusan = "Sistem Informasi";
+  mhs1.kelas = "SI2A";
+  mhs1.tampilData();
+
+  // Objek dari Named Constructor dariMap
+  Map<String, dynamic> dataMhs = {
+    'nama': "Budi Santoso",
+    'nim': 251410005,
+    'jurusan': "Sistem Informasi",
+    'kelas': "SI2A"
+  };
+  Mahasiswa mhs2 = Mahasiswa.dariMap(dataMhs);
+  mhs2.tampilData();
+
+  // Objek dari Named Constructor tanpaNama
+  Mahasiswa mhs3 = Mahasiswa.tanpaNama();
+  mhs3.tampilData();
 }
         </pre>
         <div class="iframe-container">
             <p><strong>Hasil Program Auto-Run:</strong></p>
             <iframe src="https://dartpad.dev/embed-dart.html?id=5f9379c13f5ef2d2ab217ebb4463450a&split=60&theme=dark&run=true"></iframe>
+            <p><em>*Iframe sudah diatur untuk auto-run, tidak perlu klik tombol apapun</em></p>
         </div>
 
 
-        <!-- 3.2 Kelas Car (Dari DartPad ID 2) -->
-        <h3>3.2 Kelas Car (Menampilkan Properti)</h3>
+        <h3>2.2 Kelas User</h3>
         <pre>
 // Nama        : Yoza Ulpia Rafila
 // NIM         : 251410004
 // Kelas       : SI2A
 
-class Car{
-  String? model;
-  String? color;
+class User {
+  String? _username;
+  String? _password;
+  String? _email;
+
+  // Constructor
+  User(this._username, this._password, this._email);
+
+  // Getter
+  String? get username => _username;
+  String? get email => _email;
+
+  // Setter dengan Validasi
+  set password(String? value) {
+    if (value != null && value.length >= 8) {
+      _password = value;
+      print("✅ Password berhasil diubah!");
+    } else {
+      print("❌ Password minimal 8 karakter!");
+    }
+  }
+
+  set username(String? value) {
+    if (value != null && value.length >= 5) {
+      _username = value;
+      print("✅ Username berhasil diubah!");
+    } else {
+      print("❌ Username minimal 5 karakter!");
+    }
+  }
+
+  set email(String? value) {
+    if (value != null && value.contains('@')) {
+      _email = value;
+      print("✅ Email berhasil diubah!");
+    } else {
+      print("❌ Email harus mengandung @!");
+    }
+  }
+
+  // Method Login
+  bool login(String inputUser, String inputPass) {
+    return _username == inputUser && _password == inputPass;
+  }
 }
 
 void main() {
-  Car myCar = Car();
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  print(myCar.model);
-  print(myCar.color);
+  User akun = User("yoza_ulpia", "rahasia12345678", "yoza@student.unsri.ac.id");
+  print("=== LOGIN AKUN ===");
+  print(akun.login("yoza_ulpia", "rahasia12345678") ? "✅ Login Berhasil!" : "❌ Login Gagal!");
+  
+  print("\n=== UBAH DATA AKUN ===");
+  akun.username = "yoza_ulpia_rafila";
+  akun.password = "passwordbaru123";
+  akun.email = "yoza.ulpia@student.unsri.ac.id";
+  
+  print("\n=== CEK DATA BARU ===");
+  print("Username Baru: ${akun.username}");
+  print("Email Baru: ${akun.email}");
 }
         </pre>
         <div class="iframe-container">
             <p><strong>Hasil Program Auto-Run:</strong></p>
             <iframe src="https://dartpad.dev/embed-dart.html?id=48053abb362d5dbfd83fd49019b08cf8&split=60&theme=dark&run=true"></iframe>
+            <p><em>*Program berjalan otomatis saat halaman dibuka</em></p>
         </div>
 
 
-        <!-- 3.3 Kelas Mahasiswa -->
-        <h3>3.3 Kelas Mahasiswa</h3>
+        <h3>2.3 Kelas Warna</h3>
         <pre>
 // Nama        : Yoza Ulpia Rafila
 // NIM         : 251410004
 // Kelas       : SI2A
 
-class Mahasiswa{
-  String nama;
-  String nim;
-  double ipk;
-
-  Mahasiswa(this.nama, this.nim, this.ipk);
-
-  void tampilkanData() {
-    print('Nama :$nama');
-    print('NIM :$nim');
-    print('IPK :$ipk');
-  }
+class Warna {
+  final int r, g, b;
+  const Warna(this.r, this.g, this.b);
 }
 
 void main() {
-  Mahasiswa mhs1 = Mahasiswa("Yoza Ulpia Rafila", "251410004", 3.85);
-  mhs1.tampilkanData();
+  const merah = Warna(255, 0, 0);
+  const biru = Warna(0, 0, 255);
+  print("=== CONTOH CONSTANT CONSTRUCTOR ===");
+  print("Warna Merah: R=$merah.r, G=$merah.g, B=$merah.b");
+  print("Warna Biru: R=$biru.r, G=$biru.g, B=$biru.b");
 }
         </pre>
         <div class="iframe-container">
@@ -195,28 +285,22 @@ void main() {
         </div>
 
 
-        <!-- 3.4 Kelas Person -->
-        <h3>3.4 Kelas Person</h3>
+        <h3>2.4 Kelas Titik</h3>
         <pre>
 // Nama        : Yoza Ulpia Rafila
 // NIM         : 251410004
 // Kelas       : SI2A
 
-class Person{
-  String _name;
-  int age;
-
-  Person(this._name, this.age);
-
-  void setName(String name)=>_name=name;
-  String getName()=>_name;
+class Titik {
+  final double x, y;
+  Titik(double x, double y) : x = x.abs(), y = y.abs() {
+    print("=== CONTOH INITIALIZER LIST ===");
+    print("Titik dibuat di koordinat ($x, $y)");
+  }
 }
 
 void main() {
-  Person person = Person("Yoza Ulpia Rafila", 19);
-  print(person.age);
-  person.setName("Yoza Ulpia Rafila");
-  print(person.getName());
+  Titik t1 = Titik(-5.5, -10.2);
 }
         </pre>
         <div class="iframe-container">
@@ -225,21 +309,56 @@ void main() {
         </div>
 
 
-        <!-- 3.5 Kelas Product -->
-        <h3>3.5 Kelas Product</h3>
+        <h3>2.5 Kelas Produk</h3>
         <pre>
 // Nama        : Yoza Ulpia Rafila
 // NIM         : 251410004
 // Kelas       : SI2A
 
-class Product{
-  String nama;
-  Product(this.nama);
+class Produk {
+  String? _nama;
+  double? _harga;
+
+  Produk(this._nama, this._harga);
+
+  // Getter
+  String? get nama => _nama;
+  double? get harga => _harga;
+
+  // Setter dengan Validasi
+  set nama(String? value) {
+    if (value != null && value.length >= 3) {
+      _nama = value;
+    } else {
+      print("❌ Nama produk minimal 3 karakter!");
+    }
+  }
+
+  set harga(double? value) {
+    if (value != null && value > 0) {
+      _harga = value;
+    } else {
+      print("❌ Harga harus lebih besar dari 0!");
+    }
+  }
+
+  void tampilProduk() {
+    print("\n=== DATA PRODUK ===");
+    print("Nama Produk: $_nama");
+    print("Harga Produk: $_harga");
+  }
 }
 
 void main() {
-  Product produk1 = Product("Laptop Gaming");
-  print(produk1.nama);
+  Produk laptop = Produk("Laptop Gaming", 15000000.0);
+  laptop.tampilProduk();
+
+  laptop.nama = "Mouse";
+  laptop.harga = 150000.0;
+  laptop.tampilProduk();
+
+  laptop.nama = "KB";
+  laptop.harga = -50000.0;
 }
         </pre>
         <div class="iframe-container">
@@ -248,15 +367,45 @@ void main() {
         </div>
 
 
-        <!-- 4. PENGERTIAN ENKAPSULASI -->
-        <h2>4. PENGERTIAN ENKAPSULASI</h2>
-        <p>Enkapsulasi adalah konsep menyembunyikan detail implementasi data dengan membuat atribut menjadi private (dengan awalan <code>_</code>), lalu mengatur aksesnya melalui getter dan setter.</p>
-        <p>Tujuan enkapsulasi:</p>
-        <ul>
-            <li>Menyembunyikan detail implementasi</li>
-            <li>Melindungi data dari perubahan tidak diinginkan</li>
-            <li>Membuat kode lebih mudah dipelihara</li>
-        </ul>
-    </div>
-</body>
-</html>
+        <h3>2.6 Kelas RekeningBank</h3>
+        <pre>
+// Nama        : Yoza Ulpia Rafila
+// NIM         : 251410004
+// Kelas       : SI2A
+
+class RekeningBank {
+  String? _nomorRekening;
+  double? _saldo;
+
+  RekeningBank(this._nomorRekening, this._saldo);
+
+  // Getter
+  String? get nomorRekening => _nomorRekening;
+  double? get saldo => _saldo;
+
+  // Setter
+  set nomorRekening(String? value) {
+    if (value != null && value.length >= 5) {
+      _nomorRekening = value;
+    } else {
+      print("❌ Nomor rekening minimal 5 karakter!");
+    }
+  }
+
+  void deposit(double jumlah) {
+    if (jumlah > 0) {
+      _saldo = (_saldo ?? 0) + jumlah;
+      print("✅ Deposit berhasil! Saldo: $_saldo");
+    } else {
+      print("❌ Jumlah deposit tidak valid!");
+    }
+  }
+
+  void tarikTunai(double jumlah) {
+    if (jumlah > 0 && (_saldo ?? 0) >= jumlah) {
+      _saldo = (_saldo ?? 0) - jumlah;
+      print("✅ Penarikan berhasil! Saldo: $_saldo");
+    } else {
+      print("❌ Saldo tidak cukup
+
+The file is too long. Dola only read the first 59%.
