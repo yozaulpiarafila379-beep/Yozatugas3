@@ -31,6 +31,13 @@
             padding-bottom: 15px;
             border-bottom: 2px solid #0066cc;
         }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #e6f2ff;
+            border-radius: 4px;
+        }
         .project-section {
             margin-bottom: 40px;
             padding: 20px;
@@ -57,16 +64,36 @@
             border-radius: 4px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        .conclusion {
+            background-color: #e6f2ff;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #0066cc;
+            margin-top: 50px;
+        }
+        .conclusion h2 {
+            color: #004499;
+            margin-bottom: 15px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>HASIL PROGRAM DARTPAD - SEMUA PROYEK</h1>
+        <h1>RESUME MATERI CONSTRUCTOR DALAM PEMROGRAMAN DART</h1>
+        
+        <!-- Tambahan Header Profil -->
+        <div class="profile-header">
+            <p><strong>Nama</strong> : Yoza Ulpia Rafila</p>
+            <p><strong>NIM</strong> : 251410004</p>
+            <p><strong>Kelas</strong> : SI2A</p>
+            <p><strong>Judul</strong> : Implementasi Berbagai Jenis Constructor pada Bahasa Pemrograman Dart</p>
+        </div>
 
         <!-- Proyek 1: Kelas Buku -->
         <div class="project-section">
             <div class="project-title">1. Kelas Buku</div>
-            <p>Pengertian: Contoh penggunaan parameterized constructor untuk menginisialisasi judul buku.</p>
+            <p><strong>Pengertian:</strong> Contoh penggunaan parameterized constructor untuk menginisialisasi judul buku. Parameterized constructor memungkinkan pengisian nilai atribut objek secara langsung pada saat pembuatan objek, sehingga nilai judul buku dapat ditentukan sesuai kebutuhan tanpa perlu mengubahnya secara terpisah setelah objek dibuat.</p>
             <div class="iframe-container">
                 <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=056d061cc804d29d607438659ed9a9c3&split=60&theme=dark&run=true"></iframe>
@@ -76,7 +103,7 @@
         <!-- Proyek 2: Kelas Mobil -->
         <div class="project-section">
             <div class="project-title">2. Kelas Mobil</div>
-            <p>Pengertian: Implementasi parameterized constructor dan named constructor (baru() & dariJson()).</p>
+            <p><strong>Pengertian:</strong> Implementasi parameterized constructor dan named constructor (baru() & dariJson()). Parameterized constructor digunakan untuk membuat objek mobil dengan nilai merk dan tahun yang ditentukan langsung. Named constructor memberikan fleksibilitas tambahan, di mana constructor baru() membuat objek dengan nilai default (Toyota tahun 2023), sedangkan constructor dariJson() membuat objek dari data yang disimpan dalam bentuk map, sehingga memudahkan pengolahan data dari sumber eksternal seperti file atau API.</p>
             <div class="iframe-container">
                 <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=eaa6e952fc5325681f67ce2bcd308aad&split=60&theme=dark&run=true"></iframe>
@@ -86,7 +113,7 @@
         <!-- Proyek 3: Kelas Warna -->
         <div class="project-section">
             <div class="project-title">3. Kelas Warna</div>
-            <p>Pengertian: Contoh constant constructor untuk membuat objek immutable dengan nilai RGB.</p>
+            <p><strong>Pengertian:</strong> Contoh constant constructor untuk membuat objek immutable dengan nilai RGB. Constant constructor digunakan bersama dengan keyword 'const' dan atribut 'final' untuk memastikan nilai objek tidak dapat diubah setelah dibuat. Hal ini sangat berguna untuk data yang harus tetap konsisten dan tidak berubah selama berjalannya program, seperti nilai kode warna standar.</p>
             <div class="iframe-container">
                 <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=f5759a3a30cb612f0b8cd549cd88c081&split=60&theme=dark&run=true"></iframe>
@@ -96,61 +123,18 @@
         <!-- Proyek 4: Kelas Titik -->
         <div class="project-section">
             <div class="project-title">4. Kelas Titik</div>
-            <p>Pengertian: Implementasi constructor dengan initializer list untuk mengubah nilai negatif menjadi positif.</p>
+            <p><strong>Pengertian:</strong> Implementasi constructor dengan initializer list untuk mengubah nilai negatif menjadi positif. Initializer list memungkinkan proses pengolahan nilai atribut sebelum bagian body constructor dijalankan. Dalam kasus ini, fungsi abs() digunakan untuk memastikan koordinat x dan y selalu bernilai positif, sehingga menghindari data tidak valid pada objek titik yang dibuat.</p>
             <div class="iframe-container">
                 <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=9d9b0215d693fc33074424a4e58b8702&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 5: Kelas Mahasiswa -->
-        <div class="project-section">
-            <div class="project-title">5. Kelas Mahasiswa</div>
-            <p>Pengertian: Implementasi default constructor dan named constructor (dariMap() & tanpaNama()).</p>
-            <div class="iframe-container">
-                <p><strong>Hasil Program Auto-Run:</strong></p>
-                <iframe src="https://dartpad.dev/embed-dart.html?id=8c6acae69db363da2503c843832d411a&split=60&theme=dark&run=true"></iframe>
-            </div>
-        </div>
-
-        <!-- Proyek 6: Kelas Person -->
-        <div class="project-section">
-            <div class="project-title">6. Kelas Person</div>
-            <p>Pengertian: Implementasi enkapsulasi dengan getter dan setter untuk mengelola atribut nama.</p>
-            <div class="iframe-container">
-                <p><strong>Hasil Program Auto-Run:</strong></p>
-                <iframe src="https://dartpad.dev/embed-dart.html?id=102fa38e3de419aa9ee98b46a6f9b45b&split=60&theme=dark&run=true"></iframe>
-            </div>
-        </div>
-
-        <!-- Proyek 7: Kelas Produk -->
-        <div class="project-section">
-            <div class="project-title">7. Kelas Produk</div>
-            <p>Pengertian: Implementasi enkapsulasi dengan validasi pada setter untuk nama dan harga produk.</p>
-            <div class="iframe-container">
-                <p><strong>Hasil Program Auto-Run:</strong></p>
-                <iframe src="https://dartpad.dev/embed-dart.html?id=39aa53c68684946d3f684c9ec5dde5ed&split=60&theme=dark&run=true"></iframe>
-            </div>
-        </div>
-
-        <!-- Proyek 8: Kelas User -->
-        <div class="project-section">
-            <div class="project-title">8. Kelas User</div>
-            <p>Pengertian: Implementasi enkapsulasi dengan validasi pada setter dan method login serta ganti password.</p>
-            <div class="iframe-container">
-                <p><strong>Hasil Program Auto-Run:</strong></p>
-                <iframe src="https://dartpad.dev/embed-dart.html?id=30d6287a075646af8cea033b32f90137&split=60&theme=dark&run=true"></iframe>
-            </div>
-        </div>
-
-        <!-- Proyek 9: Kelas RekeningBank -->
-        <div class="project-section">
-            <div class="project-title">9. Kelas RekeningBank</div>
-            <p>Pengertian: Implementasi enkapsulasi dengan method deposit dan tarik tunai yang memiliki validasi.</p>
-            <div class="iframe-container">
-                <p><strong>Hasil Program Auto-Run:</strong></p>
-                <iframe src="https://dartpad.dev/embed-dart.html?id=dc7b26a3a6a87a533fc030310712dbd0&split=60&theme=dark&run=true"></iframe>
-            </div>
+        <!-- Tambahan Kesimpulan -->
+        <div class="conclusion">
+            <h2>KESIMPULAN</h2>
+            <p>Dalam pemrograman berorientasi objek menggunakan Dart, constructor memiliki peran penting dalam menginisialisasi objek dengan cara yang sesuai kebutuhan. Pada proyek yang dibuat oleh Yoza Ulpia Rafila (NIM 251410004, Kelas SI2A), telah berhasil diimplementasikan berbagai jenis constructor yaitu parameterized constructor, named constructor, constant constructor, dan constructor dengan initializer list.</p>
+            <p>Masing-masing jenis constructor memiliki fungsi dan keunggulan tersendiri: parameterized constructor untuk inisialisasi langsung nilai atribut, named constructor untuk variasi pembuatan objek, constant constructor untuk objek dengan nilai tetap, dan initializer list untuk memproses nilai sebelum objek benar-benar dibuat. Dengan memahami dan menerapkan berbagai jenis constructor ini, dapat dibuat program yang lebih terstruktur, fleksibel, dan dapat menjaga konsistensi data objek yang dibuat.</p>
         </div>
     </div>
 </body>
