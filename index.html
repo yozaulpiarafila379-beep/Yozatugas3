@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume & Source Code Tugas Dart - Yoza Ulpia Rafila</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .identitas {
+            text-align: center;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #0066cc;
+        }
+        h1 {
+            color: #0055b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #004499;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid #0066cc;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #0055b3;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p, li {
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            border-left: 4px solid #0066cc;
+            margin: 10px 0;
+            font-family: Consolas, monospace;
+        }
+        .iframe-container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #0066cc;
+            border-radius: 4px;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- IDENTITAS MAHASISWA -->
+        <div class="identitas">
+            <h1>📋 RESUME MATERI SESI 2: CONSTRUCTOR & ENKAPSULASI</h1>
+            <p><strong>Nama        :</strong> Yoza Ulpia Rafila</p>
+            <p><strong>NIM         :</strong> 251410004</p>
+            <p><strong>Kelas       :</strong> SI2A</p>
+        </div>
+
+
+        <!-- 1. PENGERTIAN CONSTRUCTOR -->
+        <h2>1. PENGERTIAN CONSTRUCTOR</h2>
+        <p>Constructor adalah metode khusus dalam kelas yang digunakan untuk menginisialisasi objek saat dibuat. Di Dart, constructor tidak memiliki tipe kembalian dan nama sama dengan nama kelasnya.</p>
+
+
+        <!-- 2. JENIS-JENIS CONSTRUCTOR -->
+        <h2>2. JENIS-JENIS CONSTRUCTOR</h2>
+        <ul>
+            <li><strong>Default Constructor:</strong> Constructor tanpa parameter (otomatis dibuat jika tidak ada constructor lain). Contoh: <code>Mahasiswa();</code></li>
+            <li><strong>Parameterized Constructor:</strong> Constructor dengan parameter untuk mengisi nilai atribut langsung. Contoh: <code>Mobil(this.merk, this.tahun);</code></li>
+            <li><strong>Named Constructor:</strong> Constructor dengan nama khusus untuk membuat objek dengan cara berbeda. Contoh: <code>Mahasiswa.dariMap(data);</code></li>
+            <li><strong>Constant Constructor:</strong> Digunakan untuk membuat objek immutable dengan keyword <code>const</code>. Contoh: <code>const Warna(255, 0, 0);</code></li>
+            <li><strong>Constructor dengan Initializer List:</strong> Menginisialisasi atribut sebelum body constructor dijalankan. Contoh: <code>Titik(double x, double y) : x = x.abs(), y = y.abs();</code></li>
+        </ul>
+
+
+        <!-- 3. SOURCE CODE KELAS DART -->
+        <h2>3. SOURCE CODE KELAS DART</h2>
+
+        <!-- 3.1 Kelas Car (Dari DartPad ID 1) -->
+        <h3>3.1 Kelas Car</h3>
+        <pre>
+// Nama        : Yoza Ulpia Rafila
+// NIM         : 251410004
+// Kelas       : SI2A
+
+class Car{
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+
+void main() {
+  Car myCar = Car();
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}
+        </pre>
+        <div class="iframe-container">
+            <p><strong>Hasil Program Auto-Run:</strong></p>
+            <iframe src="https://dartpad.dev/embed-dart.html?id=5f9379c13f5ef2d2ab217ebb4463450a&split=60&theme=dark&run=true"></iframe>
+        </div>
+
+
+        <!-- 3.2 Kelas Car (Dari DartPad ID 2) -->
+        <h3>3.2 Kelas Car (Menampilkan Properti)</h3>
+        <pre>
+// Nama        : Yoza Ulpia Rafila
+// NIM         : 251410004
+// Kelas       : SI2A
+
+class Car{
+  String? model;
+  String? color;
+}
+
+void main() {
+  Car myCar = Car();
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  print(myCar.model);
+  print(myCar.color);
+}
+        </pre>
+        <div class="iframe-container">
+            <p><strong>Hasil Program Auto-Run:</strong></p>
+            <iframe src="https://dartpad.dev/embed-dart.html?id=48053abb362d5dbfd83fd49019b08cf8&split=60&theme=dark&run=true"></iframe>
+        </div>
+
+
+        <!-- 3.3 Kelas Mahasiswa -->
+        <h3>3.3 Kelas Mahasiswa</h3>
+        <pre>
+// Nama        : Yoza Ulpia Rafila
+// NIM         : 251410004
+// Kelas       : SI2A
+
+class Mahasiswa{
+  String nama;
+  String nim;
+  double ipk;
+
+  Mahasiswa(this.nama, this.nim, this.ipk);
+
+  void tampilkanData() {
+    print('Nama :$nama');
+    print('NIM :$nim');
+    print('IPK :$ipk');
+  }
+}
+
+void main() {
+  Mahasiswa mhs1 = Mahasiswa("Yoza Ulpia Rafila", "251410004", 3.85);
+  mhs1.tampilkanData();
+}
+        </pre>
+        <div class="iframe-container">
+            <p><strong>Hasil Program Auto-Run:</strong></p>
+            <iframe src="https://dartpad.dev/embed-dart.html?id=91095e213f7eb28d8dd7454540d37f83&split=60&theme=dark&run=true"></iframe>
+        </div>
+
+
+        <!-- 3.4 Kelas Person -->
+        <h3>3.4 Kelas Person</h3>
+        <pre>
+// Nama        : Yoza Ulpia Rafila
+// NIM         : 251410004
+// Kelas       : SI2A
+
+class Person{
+  String _name;
+  int age;
+
+  Person(this._name, this.age);
+
+  void setName(String name)=>_name=name;
+  String getName()=>_name;
+}
+
+void main() {
+  Person person = Person("Yoza Ulpia Rafila", 19);
+  print(person.age);
+  person.setName("Yoza Ulpia Rafila");
+  print(person.getName());
+}
+        </pre>
+        <div class="iframe-container">
+            <p><strong>Hasil Program Auto-Run:</strong></p>
+            <iframe src="https://dartpad.dev/embed-dart.html?id=de08d36d4a329017d6eca0cb546526f9&split=60&theme=dark&run=true"></iframe>
+        </div>
+
+
+        <!-- 3.5 Kelas Product -->
+        <h3>3.5 Kelas Product</h3>
+        <pre>
+// Nama        : Yoza Ulpia Rafila
+// NIM         : 251410004
+// Kelas       : SI2A
+
+class Product{
+  String nama;
+  Product(this.nama);
+}
+
+void main() {
+  Product produk1 = Product("Laptop Gaming");
+  print(produk1.nama);
+}
+        </pre>
+        <div class="iframe-container">
+            <p><strong>Hasil Program Auto-Run:</strong></p>
+            <iframe src="https://dartpad.dev/embed-dart.html?id=2147e40c2b4fbd8d7d6e58f5bceb66c7&split=60&theme=dark&run=true"></iframe>
+        </div>
+
+
+        <!-- 4. PENGERTIAN ENKAPSULASI -->
+        <h2>4. PENGERTIAN ENKAPSULASI</h2>
+        <p>Enkapsulasi adalah konsep menyembunyikan detail implementasi data dengan membuat atribut menjadi private (dengan awalan <code>_</code>), lalu mengatur aksesnya melalui getter dan setter.</p>
+        <p>Tujuan enkapsulasi:</p>
+        <ul>
+            <li>Menyembunyikan detail implementasi</li>
+            <li>Melindungi data dari perubahan tidak diinginkan</li>
+            <li>Membuat kode lebih mudah dipelihara</li>
+        </ul>
+    </div>
+</body>
+</html>
