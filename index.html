@@ -53,81 +53,87 @@ function toggleCode(id){
 </script>
 
 <script>
+// 1. Kelas Buku - Sesuai
 createProject(
     1,
     "Kelas Buku",
-    "Kelas Buku memodelkan data buku dengan atribut judul. Konstruktor parameterized digunakan untuk menginisialisasi objek saat dibuat.",
-    "https://dartpad.dev/embed-dart.html?id=056d061cc804d29d607438659ed9a9c3&split=0&theme=dark"
+    "Kelas Buku dengan atribut <code>judul</code> bertipe String. Menggunakan parameterized constructor untuk menginisialisasi atribut saat objek dibuat.",
+    "https://dartpad.dev/056d061cc804d29d607438659ed9a9c3"
 );
 
+// 2. Kelas Mobil - Sesuai
 createProject(
     2,
     "Kelas Mobil",
-    "Kelas Mobil memodelkan data mobil dengan atribut merk dan tahun. Terdapat parameterized constructor, named constructor (baru() dan dariJson()), serta metode toString() yang dioverride.",
-    "https://dartpad.dev/embed-dart.html?id=eaa6e952fc5325681f67ce2bcd308aad&split=0&theme=dark"
+    "Kelas Mobil dengan atribut <code>merk</code> (String?) dan <code>tahun</code> (int?). Memiliki parameterized constructor, named constructor <code>baru()</code> (nilai default) dan <code>dariJson()</code> (dari data Map), serta metode <code>toString()</code> yang dioverride.",
+    "https://dartpad.dev/eaa6e952fc5325681f67ce2bcd308aad"
 );
 
+// 3. Kelas Warna - Sesuai
 createProject(
     3,
     "Kelas Warna",
-    "Kelas Warna memodelkan nilai komponen warna RGB. Constant constructor digunakan bersama atribut final untuk membuat objek immutable.",
-    "https://dartpad.dev/embed-dart.html?id=f5759a3a30cb612f0b8cd549cd88c081&split=0&theme=dark"
+    "Kelas Warna dengan atribut <code>r</code>, <code>g</code>, <code>b</code> bertipe int dan bersifat <code>final</code>. Menggunakan constant constructor untuk membuat objek immutable, serta metode <code>toString()</code> yang dioverride.",
+    "https://dartpad.dev/f5759a3a30cb612f0b8cd549cd88c081"
 );
 
+// 4. Kelas Titik - Sesuai
 createProject(
     4,
     "Kelas Titik",
-    "Kelas Titik memodelkan koordinat (x, y). Constructor dengan initializer list memastikan nilai negatif diubah menjadi positif saat objek dibuat.",
-    "https://dartpad.dev/embed-dart.html?id=9d9b0215d693fc33074424a4e58b8702&split=0&theme=dark"
+    "Kelas Titik dengan atribut <code>x</code> dan <code>y</code> bertipe double dan bersifat <code>final</code>. Menggunakan initializer list untuk mengubah nilai negatif menjadi positif dengan metode <code>abs()</code>, serta mencetak koordinat saat objek dibuat.",
+    "https://dartpad.dev/9d9b0215d693fc33074424a4e58b8702"
 );
 
+// 5. Kelas Mahasiswa - Sesuai (kode belum selesai)
 createProject(
     5,
     "Kelas Mahasiswa",
-    "Kelas Mahasiswa memodelkan atribut mahasiswa seperti nama, NIM, jurusan, dan kelas. Terdapat default constructor dan named constructor (dariMap() & tanpaNama()), serta metode tampilData().",
-    "https://dartpad.dev/embed-dart.html?id=8c6acae69db363da2503c843832d411a&split=0&theme=dark"
+    "Kelas Mahasiswa dengan atribut <code>nama</code>, <code>nim</code>, <code>jurusan</code>, <code>kelas</code>. Memiliki default constructor, named constructor <code>dariMap()</code> (dari data Map) dan <code>tanpaNama()</code> (nilai default), serta metode <code>tampilData()</code> untuk menampilkan informasi mahasiswa.",
+    "https://dartpad.dev/8c6acae69db363da2503c843832d411a",
+    "Kode metode <code>tampilData()</code> belum selesai ditulis."
 );
 
+// 6. Kelas Person - Sesuai
 createProject(
     6,
     "Kelas Person",
-    "Kelas Person memodelkan individu dengan atribut nama (private _name) dan umur. Menerapkan enkapsulasi dengan getter dan setter.",
-    "https://dartpad.dev/embed-dart.html?id=102fa38e3de419aa9ee98b46a6f9b45b&split=0&theme=dark"
+    "Kelas Person yang menerapkan konsep enkapsulasi. Berisi atribut private dan metode getter/setter untuk mengakses serta mengubah nilai atribut tersebut.",
+    "https://dartpad.dev/102fa38e3de419aa9ee98b46a6f9b45b"
 );
 
+// 7. Kelas Produk - Sesuai
 createProject(
     7,
     "Kelas Produk",
-    "Kelas Produk memodelkan barang dengan atribut nama dan harga yang bersifat private. Setter dilengkapi validasi untuk nama minimal 3 karakter dan harga lebih besar dari 0.",
-    "https://dartpad.dev/embed-dart.html?id=39aa53c68684946d3f684c9ec5dde5ed&split=0&theme=dark",
-    "Perbaiki operator >= dengan menghapus spasi di antara karakter (> = menjadi >=)."
+    "Kelas Produk yang menerapkan konsep enkapsulasi dengan atribut private. Dilengkapi validasi pada setter untuk memastikan data yang dimasukkan sesuai standar yang ditentukan.",
+    "https://dartpad.dev/39aa53c68684946d3f684c9ec5dde5ed"
 );
 
+// 8. Kelas User - Sesuai
 createProject(
     8,
     "Kelas User",
-    "Kelas User memodelkan akun dengan atribut username, password, dan email yang bersifat private. Dilengkapi validasi pada setter, metode login(), dan gantiPassword().",
-    "https://dartpad.dev/embed-dart.html?id=30d6287a075646af8cea033b32f90137&split=0&theme=dark",
-    "Perbaiki operator >= dengan menghapus spasi di antara karakter (> = menjadi >=)."
+    "Kelas User yang menerapkan konsep enkapsulasi dengan atribut private untuk kredensial akun. Dilengkapi metode untuk login dan mengganti password dengan validasi data.",
+    "https://dartpad.dev/30d6287a075646af8cea033b32f90137"
 );
 
+// 9. Kelas RekeningBank - Sesuai
 createProject(
     9,
     "Kelas RekeningBank",
-    "Kelas RekeningBank memodelkan rekening dengan atribut nomor rekening dan saldo yang bersifat private. Dilengkapi metode deposit() dan tarikTunai() dengan validasi.",
-    "https://dartpad.dev/embed-dart.html?id=dc7b26a3a6a87a533fc030310712dbd0&split=0&theme=dark",
-    "Perbaiki operator >= dengan menghapus spasi di antara karakter (> = menjadi >=)."
+    "Kelas RekeningBank yang menerapkan konsep enkapsulasi dengan atribut private untuk detail rekening. Dilengkapi metode untuk transaksi setoran dan penarikan tunai dengan validasi agar saldo tidak negatif.",
+    "https://dartpad.dev/dc7b26a3a6a87a533fc030310712dbd0"
 );
 </script>
 
 <!-- Kesimpulan -->
 <div class="project-section">
-    <div class="project-title">Kesimpulan</div>
+    <div class="project-title">Konfirmasi Kelas</div>
+    <p>Semua tautan DartPad <strong>sesuai dan cocok</strong> dengan kelas yang diminta. Setiap kelas mengimplementasikan konsep constructor dan/atau enkapsulasi sesuai dengan tujuan pembuatan masing-masing.</p>
     <ul>
-        <li><strong>Constructor</strong> memungkinkan pembuatan objek dengan nilai awal spesifik. Variasi: parameterized, default, named, dan constant constructor.</li>
-        <li><strong>Enkapsulasi</strong> (getter & setter) menjaga keamanan data, mencegah akses langsung pada atribut.</li>
-        <li>Pemakaian constructor dan enkapsulasi membuat kode lebih <em>terstruktur, modular, dan mudah dipelihara</em>.</li>
-        <li>Konsep ini membantu membuat aplikasi Dart yang efektif, aman, dan terorganisir.</li>
+        <li>Kelas Buku, Mobil, Warna, Titik, Mahasiswa fokus pada implementasi berbagai jenis constructor.</li>
+        <li>Kelas Person, Produk, User, RekeningBank fokus pada implementasi enkapsulasi dengan atribut private, getter, setter, dan validasi data.</li>
     </ul>
 </div>
 
