@@ -39,47 +39,47 @@ iframe { width:100%; height:400px; border:none; border-radius:4px; box-shadow:0 
 <p><strong>Judul</strong> : Pembelajaran Constructor dan Enkapsulasi Melalui Implementasi Berbagai Kelas</p>
 </div>
 
-<!-- Proyek 1: Buku (Auto-run) -->
+<!-- Proyek 1: Kelas Buku -->
 <div class="project-section auto-run">
 <div class="project-title">1. Kelas Buku</div>
-<div class="project-explain"><strong>Penjelasan:</strong> Kelas Buku dengan parameterized constructor untuk atribut <code>judul</code>.</div>
-<div class="project-fix"><strong>Status:</strong> Sudah diperbaiki. Program menampilkan "Judul Buku: Pemrograman Dart untuk Pemula".</div>
+<div class="project-explain"><strong>Penjelasan:</strong> Kelas Buku dengan parameterized constructor untuk atribut <code>judul</code>. Fungsi <code>main()</code> membuat objek dan menampilkan judul buku.</div>
+<div class="project-fix"><strong>Status:</strong> Sudah benar. Program menampilkan "Judul Buku: Pemrograman Dart untuk Pemula".</div>
 <div class="iframe-container">
 <iframe src="https://dartpad.dev/embed-dart.html?id=056d061cc804d29d607438659ed9a9c3&split=60&theme=dark&run=true"></iframe>
 </div>
 </div>
 
-<!-- Proyek 2: Mobil (Auto-run) -->
+<!-- Proyek 2: Kelas Mobil -->
 <div class="project-section auto-run">
 <div class="project-title">2. Kelas Mobil</div>
-<div class="project-explain"><strong>Penjelasan:</strong> Atribut <code>merk</code> dan <code>tahun</code> dengan parameterized constructor, named constructor <code>baru()</code> dan <code>dariJson()</code>.</div>
-<div class="project-fix"><strong>Status:</strong> Sudah benar, menampilkan tiga objek mobil.</div>
+<div class="project-explain"><strong>Penjelasan:</strong> Atribut <code>merk</code> dan <code>tahun</code> dengan parameterized constructor, named constructor <code>baru()</code> dan <code>dariJson()</code>. Metode <code>toString()</code> dioverride untuk menampilkan informasi objek.</div>
+<div class="project-fix"><strong>Status:</strong> Sudah benar. Menampilkan tiga objek mobil dengan detail berbeda.</div>
 <div class="iframe-container">
 <iframe src="https://dartpad.dev/embed-dart.html?id=eaa6e952fc5325681f67ce2bcd308aad&split=60&theme=dark&run=true"></iframe>
 </div>
 </div>
 
-<!-- Proyek 3: Warna (Auto-run) -->
+<!-- Proyek 3: Kelas Warna -->
 <div class="project-section auto-run">
 <div class="project-title">3. Kelas Warna</div>
-<div class="project-explain"><strong>Penjelasan:</strong> Constant constructor, atribut <code>final</code>, objek immutable.</div>
-<div class="project-fix"><strong>Status:</strong> Sudah benar, menampilkan warna merah dan biru.</div>
+<div class="project-explain"><strong>Penjelasan:</strong> Constant constructor, atribut <code>final</code>, objek immutable. Menyimpan nilai komponen warna RGB.</div>
+<div class="project-fix"><strong>Status:</strong> Sudah benar. Menampilkan detail warna merah (255,0,0) dan biru (0,0,255).</div>
 <div class="iframe-container">
 <iframe src="https://dartpad.dev/embed-dart.html?id=f5759a3a30cb612f0b8cd549cd88c081&split=60&theme=dark&run=true"></iframe>
 </div>
 </div>
 
-<!-- Proyek 4: Titik (Auto-run) -->
+<!-- Proyek 4: Kelas Titik -->
 <div class="project-section auto-run">
 <div class="project-title">4. Kelas Titik</div>
-<div class="project-explain"><strong>Penjelasan:</strong> Titik dengan <code>x</code> dan <code>y</code>, menggunakan initializer list untuk memproses nilai sebelum objek dibuat.</div>
-<div class="project-fix"><strong>Status:</strong> Sudah benar, menampilkan koordinat positif dari input negatif.</div>
+<div class="project-explain"><strong>Penjelasan:</strong> Titik dengan <code>x</code> dan <code>y</code>, menggunakan initializer list untuk mengubah nilai negatif menjadi positif sebelum objek dibuat.</div>
+<div class="project-fix"><strong>Status:</strong> Sudah benar. Menampilkan koordinat positif dari input negatif.</div>
 <div class="iframe-container">
 <iframe src="https://dartpad.dev/embed-dart.html?id=9d9b0215d693fc33074424a4e58b8702&split=60&theme=dark&run=true"></iframe>
 </div>
 </div>
 
-<!-- Proyek 5: Mahasiswa (Auto-run) -->
+<!-- Proyek 5: Kelas Mahasiswa -->
 <div class="project-section auto-run">
 <div class="project-title">5. Kelas Mahasiswa</div>
 <div class="project-explain">
@@ -89,37 +89,38 @@ iframe { width:100%; height:400px; border:none; border-radius:4px; box-shadow:0 
 </ul>
 Method <code>tampilData()</code> digunakan untuk menampilkan detail mahasiswa.
 </div>
-<div class="project-fix"><strong>Status:</strong> Kode sudah benar, menampilkan tiga mahasiswa.</div>
+<div class="project-fix"><strong>Status:</strong> Sudah benar. Menampilkan tiga mahasiswa dengan data berbeda.</div>
 <div class="iframe-container">
 <iframe src="https://dartpad.dev/embed-dart.html?id=8c6acae69db363da2503c843832d411a&split=60&theme=dark&run=true"></iframe>
 </div>
 </div>
 
-<!-- Proyek 6: Person (Manual-run / tidak auto-run) -->
+<!-- Proyek 6: Kelas Person -->
 <div class="project-section manual-run">
 <div class="project-title">6. Kelas Person</div>
 <button class="toggle-btn">Tampilkan Proyek</button>
 <div class="hidden-content">
 <div class="project-explain">
-<strong>Penjelasan:</strong> Kelas ini menerapkan enkapsulasi dengan atribut private <code>_name</code>. Getter dan setter tersedia untuk mengakses dan mengubah nilai. Constructor menerima <code>_name</code> dan <code>age</code>.
+<strong>Penjelasan:</strong> Kelas ini menerapkan enkapsulasi dengan atribut private <code>_name</code>. Getter (<code>nama</code>, <code>getName()</code>) dan setter (<code>nama</code>, <code>setName()</code>) tersedia untuk mengakses dan mengubah nilai. Constructor menerima <code>_name</code> dan <code>age</code>.
 </div>
-<div class="project-fix"><strong>Status:</strong> Setelah dijalankan, menampilkan perubahan nama objek.</div>
+<div class="project-fix"><strong>Status:</strong> Sudah benar. Menampilkan perubahan nama objek dari "Yoza Ulpia Rafila" menjadi "Yoza U. Rafila" dan kemudian "Yoza Ulpia R.".
+</div>
 <div class="iframe-container">
 <iframe src="https://dartpad.dev/embed-dart.html?id=102fa38e3de419aa9ee98b46a6f9b45b&split=60&theme=dark&run=true"></iframe>
 </div>
 </div>
 </div>
 
-<!-- Proyek 7: Produk (Manual-run / tidak auto-run) -->
+<!-- Proyek 7: Kelas Produk -->
 <div class="project-section manual-run">
 <div class="project-title">7. Kelas Produk</div>
 <button class="toggle-btn">Tampilkan Proyek</button>
 <div class="hidden-content">
 <div class="project-explain">
-<strong>Penjelasan:</strong> Atribut private <code>_nama</code> dan <code>_harga</code> dengan validasi setter.
+<strong>Penjelasan:</strong> Atribut private <code>_nama</code> dan <code>_harga</code> dengan validasi setter. Setter <code>nama</code> memastikan nama minimal 3 karakter, sedangkan setter <code>harga</code> memastikan nilai lebih besar dari 0.
 </div>
 <div class="project-fix">
-<strong>Perbaikan:</strong> Operator <code>>=</code> diperbaiki. Program menampilkan pesan error atau sukses sesuai input.
+<strong>Status:</strong> Sudah diperbaiki. Operator <code>>=</code> diperbaiki, program menampilkan pesan error atau sukses sesuai input.
 </div>
 <div class="iframe-container">
 <iframe src="https://dartpad.dev/embed-dart.html?id=39aa53c68684946d3f684c9ec5dde5ed&split=60&theme=dark&run=true"></iframe>
@@ -127,16 +128,16 @@ Method <code>tampilData()</code> digunakan untuk menampilkan detail mahasiswa.
 </div>
 </div>
 
-<!-- Proyek 8: User (Manual-run / tidak auto-run) -->
+<!-- Proyek 8: Kelas User -->
 <div class="project-section manual-run">
 <div class="project-title">8. Kelas User</div>
 <button class="toggle-btn">Tampilkan Proyek</button>
 <div class="hidden-content">
 <div class="project-explain">
-<strong>Penjelasan:</strong> Atribut private <code>_username, _password, _email</code> dengan validasi setter. Ada metode <code>login()</code> dan <code>gantiPassword()</code>.
+<strong>Penjelasan:</strong> Atribut private <code>_username, _password, _email</code> dengan validasi setter. Ada metode <code>login()</code> untuk memverifikasi kredensial dan <code>gantiPassword()</code> untuk mengubah password dengan validasi.
 </div>
 <div class="project-fix">
-<strong>Perbaikan:</strong> Operator >= diperbaiki, validasi email ditambahkan. Program menampilkan hasil login dan validasi password/email.
+<strong>Status:</strong> Sudah diperbaiki. Operator <code>>=</code> diperbaiki, validasi email ditambahkan. Program menampilkan hasil login dan validasi data.
 </div>
 <div class="iframe-container">
 <iframe src="https://dartpad.dev/embed-dart.html?id=30d6287a075646af8cea033b32f90137&split=60&theme=dark&run=true"></iframe>
@@ -144,16 +145,16 @@ Method <code>tampilData()</code> digunakan untuk menampilkan detail mahasiswa.
 </div>
 </div>
 
-<!-- Proyek 9: RekeningBank (Manual-run / tidak auto-run) -->
+<!-- Proyek 9: Kelas RekeningBank -->
 <div class="project-section manual-run">
 <div class="project-title">9. Kelas RekeningBank</div>
 <button class="toggle-btn">Tampilkan Proyek</button>
 <div class="hidden-content">
 <div class="project-explain">
-<strong>Penjelasan:</strong> Atribut private <code>_nomorRekening, _saldo, _pemilik</code>. Method deposit dan tarikTunai dengan validasi agar saldo tidak negatif.
+<strong>Penjelasan:</strong> Atribut private <code>_nomorRekening, _saldo</code>. Setter <code>nomorRekening</code> memastikan nomor minimal 5 karakter. Method <code>deposit()</code> dan <code>tarikTunai()</code> dengan validasi agar jumlah transaksi positif dan saldo cukup.
 </div>
 <div class="project-fix">
-<strong>Status:</strong> Program menampilkan info rekening dan perubahan saldo setelah transaksi.
+<strong>Status:</strong> Sudah diperbaiki. Operator <code>>=</code> diperbaiki. Program menampilkan info rekening dan perubahan saldo setelah transaksi.
 </div>
 <div class="iframe-container">
 <iframe src="https://dartpad.dev/embed-dart.html?id=dc7b26a3a6a87a533fc030310712dbd0&split=60&theme=dark&run=true"></iframe>
@@ -164,8 +165,8 @@ Method <code>tampilData()</code> digunakan untuk menampilkan detail mahasiswa.
 <!-- Kesimpulan -->
 <div class="conclusion">
 <h2>Kesimpulan</h2>
-<p>Constructor digunakan untuk inisialisasi objek: default, parameterized, named, atau constant constructor.</p>
-<p>Enkapsulasi melindungi data dengan atribut private dan menyediakan getter/setter. Proyek yang tidak auto-run bisa ditampilkan sesuai kebutuhan menggunakan tombol “Tampilkan Proyek”.</p>
+<p>Constructor digunakan untuk inisialisasi objek dengan berbagai jenis: default, parameterized, named, atau constant constructor. Initializer list dapat digunakan untuk memproses nilai sebelum objek dibuat.</p>
+<p>Enkapsulasi melindungi data dengan atribut private dan menyediakan getter/setter yang dapat dilengkapi validasi. Beberapa metode tambahan dapat ditambahkan untuk menjalankan fungsi spesifik sesuai kebutuhan kelas. Setiap proyek sudah diatur dengan iframe yang unik sehingga menampilkan konten yang benar.</p>
 </div>
 
 </div>
@@ -175,7 +176,7 @@ const buttons = document.querySelectorAll('.toggle-btn');
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
     const content = btn.nextElementSibling;
-    if(content.style.display === 'none') {
+    if(content.style.display === 'none' || content.style.display === '') {
       content.style.display = 'block';
       btn.textContent = 'Sembunyikan Proyek';
     } else {
