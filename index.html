@@ -17,133 +17,120 @@ iframe { width:100%; height:400px; border:none; border-radius:4px; display:none;
 .run-button { margin-top:10px; padding:8px 15px; background:#0066cc; color:white; border:none; border-radius:4px; cursor:pointer;}
 .run-button:hover { background:#0055b3; }
 ul { margin-top:10px; margin-left:20px;}
+.note { margin-top:10px; padding:10px; background:#ffebee; border-left:3px solid #f44336; border-radius:4px;}
 </style>
 </head>
 <body>
 <div class="container">
 
-    <!-- Judul & Informasi Mahasiswa -->
-    <h1>Constructor & Enkapsulasi</h1>
-    <div class="info">
-        <p><strong>Nama:</strong> Yoza Ulpia Rafila</p>
-        <p><strong>NIM:</strong> 251410004</p>
-        <p><strong>Kelas:</strong> SI2A</p>
-    </div>
-
-    <!-- Proyek 1 -->
-    <div class="project-section">
-        <div class="project-title">1. Kelas Buku</div>
-        <p><strong>Pengertian:</strong> Kelas Buku memodelkan data buku dengan atribut judul, penulis, dan harga. Konstruktor parameterized digunakan untuk menginisialisasi objek saat dibuat.</p>
-        <button class="run-button" onclick="toggleCode('iframe1')">Tampilkan Kode</button>
-        <div class="iframe-container">
-            <iframe id="iframe1" src="https://dartpad.dev/embed-dart.html?id=056d061cc804d29d607438659ed9a9c3&split=0&theme=dark&run=true"></iframe>
-        </div>
-    </div>
-
-    <!-- Proyek 2 -->
-    <div class="project-section">
-        <div class="project-title">2. Kelas Mobil</div>
-        <p><strong>Pengertian:</strong> Kelas Mobil memodelkan data mobil dengan atribut merk, tipe, dan tahun. Parameterized constructor dan named constructor (baru() & dariJson()) memberikan fleksibilitas pembuatan objek.</p>
-        <button class="run-button" onclick="toggleCode('iframe2')">Tampilkan Kode</button>
-        <div class="iframe-container">
-            <iframe id="iframe2" src="https://dartpad.dev/embed-dart.html?id=eaa6e952fc5325681f67ce2bcd308aad&split=0&theme=dark&run=true"></iframe>
-        </div>
-    </div>
-
-    <!-- Proyek 3 -->
-    <div class="project-section">
-        <div class="project-title">3. Kelas Warna</div>
-        <p><strong>Pengertian:</strong> Kelas Warna memodelkan nilai RGB. Constant constructor membuat objek immutable sehingga nilainya tidak bisa diubah.</p>
-        <button class="run-button" onclick="toggleCode('iframe3')">Tampilkan Kode</button>
-        <div class="iframe-container">
-            <iframe id="iframe3" src="https://dartpad.dev/embed-dart.html?id=f5759a3a30cb612f0b8cd549cd88c081&split=0&theme=dark&run=true"></iframe>
-        </div>
-    </div>
-
-    <!-- Proyek 4 -->
-    <div class="project-section">
-        <div class="project-title">4. Kelas Titik</div>
-        <p><strong>Pengertian:</strong> Kelas Titik memodelkan koordinat (x, y). Constructor dengan initializer list memastikan nilai negatif diubah menjadi positif saat objek dibuat.</p>
-        <button class="run-button" onclick="toggleCode('iframe4')">Tampilkan Kode</button>
-        <div class="iframe-container">
-            <iframe id="iframe4" src="https://dartpad.dev/embed-dart.html?id=9d9b0215d693fc33074424a4e58b8702&split=0&theme=dark&run=true"></iframe>
-        </div>
-    </div>
-
-    <!-- Proyek 5 -->
-    <div class="project-section">
-        <div class="project-title">5. Kelas Mahasiswa</div>
-        <p><strong>Pengertian:</strong> Kelas Mahasiswa memodelkan atribut mahasiswa seperti nama, NIM, dan jurusan. Terdapat default constructor dan named constructor (dariMap() & tanpaNama()) untuk fleksibilitas pembuatan objek.</p>
-        <button class="run-button" onclick="toggleCode('iframe5')">Tampilkan Kode</button>
-        <div class="iframe-container">
-            <iframe id="iframe5" src="https://dartpad.dev/embed-dart.html?id=8c6acae69db363da2503c843832d411a&split=0&theme=dark&run=true"></iframe>
-        </div>
-    </div>
-
-    <!-- Proyek 6 -->
-    <div class="project-section">
-        <div class="project-title">6. Kelas Person</div>
-        <p><strong>Pengertian:</strong> Kelas Person memodelkan individu dengan atribut nama dan umur. Getter dan setter digunakan untuk enkapsulasi agar data aman dan dapat diubah dengan benar.</p>
-        <button class="run-button" onclick="toggleCode('iframe6')">Tampilkan Kode</button>
-        <div class="iframe-container">
-            <iframe id="iframe6" src="https://dartpad.dev/embed-dart.html?id=102fa38e3de419aa9ee98b46a6f9b45b&split=0&theme=dark&run=true"></iframe>
-        </div>
-    </div>
-
-    <!-- Proyek 7 -->
-    <div class="project-section">
-        <div class="project-title">7. Kelas Produk</div>
-        <p><strong>Pengertian:</strong> Kelas Produk memodelkan barang dengan atribut nama dan harga. Setter dilengkapi validasi untuk mencegah harga negatif atau nama kosong.</p>
-        <button class="run-button" onclick="toggleCode('iframe7')">Tampilkan Kode</button>
-        <div class="iframe-container">
-            <iframe id="iframe7" src="https://dartpad.dev/embed-dart.html?id=39aa53c68684946d3f684c9ec5dde5ed&split=0&theme=dark&run=true"></iframe>
-        </div>
-    </div>
-
-    <!-- Proyek 8 -->
-    <div class="project-section">
-        <div class="project-title">8. Kelas User</div>
-        <p><strong>Pengertian:</strong> Kelas User memodelkan akun dengan atribut username dan password. Method login dan ganti password dengan validasi menjaga keamanan data.</p>
-        <button class="run-button" onclick="toggleCode('iframe8')">Tampilkan Kode</button>
-        <div class="iframe-container">
-            <iframe id="iframe8" src="https://dartpad.dev/embed-dart.html?id=30d6287a075646af8cea033b32f90137&split=0&theme=dark&run=true"></iframe>
-        </div>
-    </div>
-
-    <!-- Proyek 9 -->
-    <div class="project-section">
-        <div class="project-title">9. Kelas RekeningBank</div>
-        <p><strong>Pengertian:</strong> Kelas RekeningBank memodelkan rekening dengan atribut saldo. Method deposit dan tarik tunai dengan validasi memastikan transaksi aman dan saldo tidak negatif.</p>
-        <button class="run-button" onclick="toggleCode('iframe9')">Tampilkan Kode</button>
-        <div class="iframe-container">
-            <iframe id="iframe9" src="https://dartpad.dev/embed-dart.html?id=dc7b26a3a6a87a533fc030310712dbd0&split=0&theme=dark&run=true"></iframe>
-        </div>
-    </div>
-
-    <!-- Kesimpulan -->
-    <div class="project-section">
-        <div class="project-title">Kesimpulan</div>
-        <p>Kesimpulan tersusun rapi:</p>
-        <ul>
-            <li><strong>Constructor</strong> memungkinkan pembuatan objek dengan nilai awal spesifik. Variasi: parameterized, default, named, dan constant constructor.</li>
-            <li><strong>Enkapsulasi</strong> (getter & setter) menjaga keamanan data, mencegah akses langsung pada atribut.</li>
-            <li>Pemakaian constructor dan enkapsulasi membuat kode lebih <em>terstruktur, modular, dan mudah dipelihara</em>.</li>
-            <li>Konsep ini membantu membuat aplikasi Dart yang efektif, aman, dan terorganisir.</li>
-        </ul>
-    </div>
-
+<h1>Constructor & Enkapsulasi</h1>
+<div class="info">
+    <p><strong>Nama:</strong> Yoza Ulpia Rafila</p>
+    <p><strong>NIM:</strong> 251410004</p>
+    <p><strong>Kelas:</strong> SI2A</p>
 </div>
 
+<!-- Fungsi untuk membuat proyek -->
 <script>
+function createProject(id, title, description, iframeSrc, note = "") {
+    document.write(`
+    <div class="project-section">
+        <div class="project-title">${id}. ${title}</div>
+        <p><strong>Pengertian:</strong> ${description}</p>
+        ${note !== "" ? `<div class="note"><strong>Catatan:</strong> ${note}</div>` : ""}
+        <button class="run-button" onclick="toggleCode('iframe${id}')">Tampilkan Kode</button>
+        <div class="iframe-container">
+            <iframe id="iframe${id}" src="${iframeSrc}"></iframe>
+        </div>
+    </div>
+    `);
+}
 function toggleCode(id){
     const iframe = document.getElementById(id);
-    if(iframe.style.display === 'none'){
-        iframe.style.display = 'block';
-        iframe.scrollIntoView({behavior:"smooth"});
-    } else {
-        iframe.style.display = 'none';
-    }
+    iframe.style.display = (iframe.style.display === 'none') ? 'block' : 'none';
+    if(iframe.style.display === 'block') iframe.scrollIntoView({behavior:"smooth"});
 }
 </script>
+
+<script>
+createProject(
+    1,
+    "Kelas Buku",
+    "Kelas Buku memodelkan data buku dengan atribut judul. Konstruktor parameterized digunakan untuk menginisialisasi objek saat dibuat.",
+    "https://dartpad.dev/embed-dart.html?id=056d061cc804d29d607438659ed9a9c3&split=0&theme=dark"
+);
+
+createProject(
+    2,
+    "Kelas Mobil",
+    "Kelas Mobil memodelkan data mobil dengan atribut merk dan tahun. Terdapat parameterized constructor, named constructor (baru() dan dariJson()), serta metode toString() yang dioverride.",
+    "https://dartpad.dev/embed-dart.html?id=eaa6e952fc5325681f67ce2bcd308aad&split=0&theme=dark"
+);
+
+createProject(
+    3,
+    "Kelas Warna",
+    "Kelas Warna memodelkan nilai komponen warna RGB. Constant constructor digunakan bersama atribut final untuk membuat objek immutable.",
+    "https://dartpad.dev/embed-dart.html?id=f5759a3a30cb612f0b8cd549cd88c081&split=0&theme=dark"
+);
+
+createProject(
+    4,
+    "Kelas Titik",
+    "Kelas Titik memodelkan koordinat (x, y). Constructor dengan initializer list memastikan nilai negatif diubah menjadi positif saat objek dibuat.",
+    "https://dartpad.dev/embed-dart.html?id=9d9b0215d693fc33074424a4e58b8702&split=0&theme=dark"
+);
+
+createProject(
+    5,
+    "Kelas Mahasiswa",
+    "Kelas Mahasiswa memodelkan atribut mahasiswa seperti nama, NIM, jurusan, dan kelas. Terdapat default constructor dan named constructor (dariMap() & tanpaNama()), serta metode tampilData().",
+    "https://dartpad.dev/embed-dart.html?id=8c6acae69db363da2503c843832d411a&split=0&theme=dark"
+);
+
+createProject(
+    6,
+    "Kelas Person",
+    "Kelas Person memodelkan individu dengan atribut nama (private _name) dan umur. Menerapkan enkapsulasi dengan getter dan setter.",
+    "https://dartpad.dev/embed-dart.html?id=102fa38e3de419aa9ee98b46a6f9b45b&split=0&theme=dark"
+);
+
+createProject(
+    7,
+    "Kelas Produk",
+    "Kelas Produk memodelkan barang dengan atribut nama dan harga yang bersifat private. Setter dilengkapi validasi untuk nama minimal 3 karakter dan harga lebih besar dari 0.",
+    "https://dartpad.dev/embed-dart.html?id=39aa53c68684946d3f684c9ec5dde5ed&split=0&theme=dark",
+    "Perbaiki operator >= dengan menghapus spasi di antara karakter (> = menjadi >=)."
+);
+
+createProject(
+    8,
+    "Kelas User",
+    "Kelas User memodelkan akun dengan atribut username, password, dan email yang bersifat private. Dilengkapi validasi pada setter, metode login(), dan gantiPassword().",
+    "https://dartpad.dev/embed-dart.html?id=30d6287a075646af8cea033b32f90137&split=0&theme=dark",
+    "Perbaiki operator >= dengan menghapus spasi di antara karakter (> = menjadi >=)."
+);
+
+createProject(
+    9,
+    "Kelas RekeningBank",
+    "Kelas RekeningBank memodelkan rekening dengan atribut nomor rekening dan saldo yang bersifat private. Dilengkapi metode deposit() dan tarikTunai() dengan validasi.",
+    "https://dartpad.dev/embed-dart.html?id=dc7b26a3a6a87a533fc030310712dbd0&split=0&theme=dark",
+    "Perbaiki operator >= dengan menghapus spasi di antara karakter (> = menjadi >=)."
+);
+</script>
+
+<!-- Kesimpulan -->
+<div class="project-section">
+    <div class="project-title">Kesimpulan</div>
+    <ul>
+        <li><strong>Constructor</strong> memungkinkan pembuatan objek dengan nilai awal spesifik. Variasi: parameterized, default, named, dan constant constructor.</li>
+        <li><strong>Enkapsulasi</strong> (getter & setter) menjaga keamanan data, mencegah akses langsung pada atribut.</li>
+        <li>Pemakaian constructor dan enkapsulasi membuat kode lebih <em>terstruktur, modular, dan mudah dipelihara</em>.</li>
+        <li>Konsep ini membantu membuat aplikasi Dart yang efektif, aman, dan terorganisir.</li>
+    </ul>
+</div>
+
+</div>
 </body>
 </html>
