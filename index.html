@@ -1,145 +1,162 @@
-<p><strong>Judul</strong> : Pembelajaran Konsep Constructor dan Enkapsulasi Melalui Implementasi Berbagai Kelas dalam Dart</p>
-        </div>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Materi + Hasil DartPad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0055b3;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #0066cc;
+        }
+        .project-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-left: 4px solid #0066cc;
+            background-color: #f8fcff;
+            border-radius: 4px;
+        }
+        .project-title {
+            color: #004499;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .iframe-container {
+            margin-top: 15px;
+            padding: 15px;
+            border: 2px solid #0066cc;
+            border-radius: 4px;
+            background-color: white;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HASIL PROGRAM DARTPAD - SEMUA PROYEK</h1>
 
         <!-- Proyek 1: Kelas Buku -->
         <div class="project-section">
             <div class="project-title">1. Kelas Buku</div>
-
-            <div class="project-explain">
-                <strong>Penjelasan Kelas:</strong> Kelas ini merepresentasikan objek buku dengan atribut
-                <code>judul</code>. Constructor digunakan untuk memberikan nilai judul saat objek dibuat.
-            </div>
-
-            <div class="project-fix">
-                <strong>Perbaikan:</strong> Penulisan class harus <code>class Buku</code> dan
-                atribut <code>String judul</code>.
-            </div>
-
+            <p>Pengertian: Kelas Buku adalah representasi objek buku dengan atribut seperti judul, penulis, dan harga. Konstruktor parameterized digunakan untuk menginisialisasi objek dengan data tertentu saat dibuat.</p>
             <div class="iframe-container">
-                <p><strong>Hasil Program:</strong></p>
+                <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=056d061cc804d29d607438659ed9a9c3&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 2 -->
+        <!-- Proyek 2: Kelas Mobil -->
         <div class="project-section">
             <div class="project-title">2. Kelas Mobil</div>
-
-            <div class="project-explain">
-                Kelas mobil memiliki atribut <code>merk</code> dan <code>tahun</code>.
-                Menggunakan parameterized constructor dan named constructor.
-            </div>
-
+            <p>Pengertian: Kelas Mobil digunakan untuk memodelkan data mobil, termasuk merk, tipe, dan tahun. Terdapat parameterized constructor untuk inisialisasi umum, dan named constructor seperti baru() dan dariJson() untuk membuat objek dari skenario berbeda.</p>
             <div class="iframe-container">
+                <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=eaa6e952fc5325681f67ce2bcd308aad&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 3 -->
+        <!-- Proyek 3: Kelas Warna -->
         <div class="project-section">
             <div class="project-title">3. Kelas Warna</div>
-
-            <div class="project-explain">
-                Kelas ini menggunakan <code>const constructor</code> dengan atribut
-                final r, g, b sehingga objek tidak dapat diubah setelah dibuat.
-            </div>
-
+            <p>Pengertian: Kelas Warna merepresentasikan nilai warna menggunakan atribut RGB. Constant constructor digunakan agar objek bersifat immutable sehingga nilai tidak bisa diubah setelah dibuat.</p>
             <div class="iframe-container">
+                <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=f5759a3a30cb612f0b8cd549cd88c081&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 4 -->
+        <!-- Proyek 4: Kelas Titik -->
         <div class="project-section">
             <div class="project-title">4. Kelas Titik</div>
-
-            <div class="project-explain">
-                Constructor menggunakan initializer list untuk memproses nilai sebelum objek dibuat.
-            </div>
-
+            <p>Pengertian: Kelas Titik digunakan untuk merepresentasikan koordinat (x, y). Constructor dengan initializer list digunakan untuk memastikan nilai negatif diubah menjadi positif saat objek dibuat.</p>
             <div class="iframe-container">
+                <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=9d9b0215d693fc33074424a4e58b8702&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 5 -->
+        <!-- Proyek 5: Kelas Mahasiswa -->
         <div class="project-section">
             <div class="project-title">5. Kelas Mahasiswa</div>
-
-            <div class="project-explain">
-                Memiliki constructor default dan named constructor dariMap untuk membuat objek mahasiswa.
-            </div>
-
+            <p>Pengertian: Kelas Mahasiswa memodelkan data mahasiswa dengan atribut seperti nama, nim, dan jurusan. Terdapat default constructor dan named constructor seperti dariMap() untuk inisialisasi dari map dan tanpaNama() untuk membuat objek dengan nama default.</p>
             <div class="iframe-container">
+                <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=8c6acae69db363da2503c843832d411a&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 6 -->
+        <!-- Proyek 6: Kelas Person -->
         <div class="project-section">
             <div class="project-title">6. Kelas Person</div>
-
-            <div class="project-explain">
-                Menerapkan konsep enkapsulasi menggunakan atribut private
-                <code>_name</code> dengan getter dan setter.
-            </div>
-
+            <p>Pengertian: Kelas Person digunakan untuk memodelkan individu dengan atribut nama dan umur. Getter dan setter digunakan untuk mengimplementasikan enkapsulasi, sehingga data dapat diakses dan dimodifikasi dengan aman.</p>
             <div class="iframe-container">
+                <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=102fa38e3de419aa9ee98b46a6f9b45b&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 7 -->
+        <!-- Proyek 7: Kelas Produk -->
         <div class="project-section">
             <div class="project-title">7. Kelas Produk</div>
-
-            <div class="project-explain">
-                Menggunakan atribut private dan setter dengan validasi
-                nama minimal 3 karakter dan harga harus lebih dari 0.
-            </div>
-
+            <p>Pengertian: Kelas Produk merepresentasikan barang dengan atribut nama dan harga. Setter dilengkapi validasi agar data yang dimasukkan sesuai aturan, sehingga tidak ada harga negatif atau nama kosong.</p>
             <div class="iframe-container">
+                <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=39aa53c68684946d3f684c9ec5dde5ed&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 8 -->
+        <!-- Proyek 8: Kelas User -->
         <div class="project-section">
             <div class="project-title">8. Kelas User</div>
-
-            <div class="project-explain">
-                Kelas user menggunakan enkapsulasi untuk username, password dan email
-                dengan validasi tertentu.
-            </div>
-
+            <p>Pengertian: Kelas User memodelkan akun pengguna dengan atribut username dan password. Implementasi setter dan method login serta ganti password memastikan keamanan data dan validasi input pengguna.</p>
             <div class="iframe-container">
+                <p><strong>Hasil Program Auto-Run:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=30d6287a075646af8cea033b32f90137&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 9 -->
+        <!-- Proyek 9: Kelas RekeningBank -->
         <div class="project-section">
             <div class="project-title">9. Kelas RekeningBank</div>
-
-            <div class="project-explain">
-                Kelas ini mengelola data rekening bank dengan atribut private
-                <code>_nomorRekening</code>, <code>_saldo</code>, dan <code>_pemilik</code>.
-                Metode setor dan tarik digunakan untuk mengelola saldo.
-            </div>
-
+            <p>Pengertian: Kelas RekeningBank memodelkan rekening dengan atribut saldo. Method deposit dan tarik tunai dilengkapi validasi untuk memastikan saldo tidak negatif dan transaksi sesuai aturan.</p>
             <div class="iframe-container">
-                <iframe src="https://dartpad.dev/embed-dart.html"></iframe>
+                <p><strong>Hasil Program Auto-Run:</strong></p>
+                <iframe src="https://dartpad.dev/embed-dart.html?id=dc7b26a3a6a87a533fc030310712dbd0&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Kesimpulan -->
-        <div class="conclusion">
-            <h2>Kesimpulan</h2>
-            <p>
-                Constructor digunakan untuk menginisialisasi objek ketika dibuat.
-                Enkapsulasi digunakan untuk melindungi data dengan membuat atribut private
-                serta menyediakan getter dan setter untuk mengaksesnya.
-            </p>
+        <!-- Bagian Kesimpulan -->
+        <div class="project-section">
+            <div class="project-title">Kesimpulan</div>
+            <p>Melalui semua proyek DartPad di atas, dapat disimpulkan bahwa penggunaan constructor (parameterized, default, named, constant), enkapsulasi (getter dan setter), dan validasi sangat penting dalam pemrograman Dart untuk memastikan objek dibuat dengan benar, data aman, dan perilaku program sesuai yang diharapkan. Dengan memahami konsep-konsep ini, programmer dapat membuat kode yang lebih terstruktur, modular, dan mudah dipelihara.</p>
         </div>
 
     </div>
