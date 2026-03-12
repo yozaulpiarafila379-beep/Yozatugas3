@@ -1,193 +1,145 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Materi + Hasil DartPad</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background-color: #f5f7fa;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #0055b3;
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #0066cc;
-        }
-        .profile-header {
-            text-align: center;
-            margin-bottom: 30px;
-            padding: 15px;
-            background-color: #e6f2ff;
-            border-radius: 4px;
-        }
-        .project-section {
-            margin-bottom: 40px;
-            padding: 20px;
-            border-left: 4px solid #0066cc;
-            background-color: #f8fcff;
-            border-radius: 4px;
-        }
-        .project-title {
-            color: #004499;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        .project-explain, .project-fix {
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .project-explain {
-            background-color: #e8f4f8;
-            padding: 10px;
-            border-radius: 4px;
-            border-left: 3px solid #0066cc;
-        }
-        .project-fix {
-            background-color: #fff3cd;
-            padding: 10px;
-            border-radius: 4px;
-            border-left: 3px solid #ffc107;
-        }
-        .iframe-container {
-            margin-top: 15px;
-            padding: 15px;
-            border: 2px solid #0066cc;
-            border-radius: 4px;
-            background-color: white;
-        }
-        iframe {
-            width: 100%;
-            height: 400px;
-            border: none;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .conclusion {
-            background-color: #e6f2ff;
-            padding: 25px;
-            border-radius: 8px;
-            border: 1px solid #0066cc;
-            margin-top: 50px;
-        }
-        .conclusion h2 {
-            color: #004499;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>IMPLEMENTASI CONSTRUCTOR DAN ENKAPSULASI PADA PEMROGRAMAN DART</h1>
-
-        <!-- Profil -->
-        <div class="profile-header">
-            <p><strong>Nama</strong> : Yoza Ulpia Rafila</p>
-            <p><strong>NIM</strong> : 251410004</p>
-            <p><strong>Kelas</strong> : SI2A</p>
-            <p><strong>Judul</strong> : Pembelajaran Konsep Constructor dan Enkapsulasi Melalui Implementasi Berbagai Kelas dalam Dart</p>
+<p><strong>Judul</strong> : Pembelajaran Konsep Constructor dan Enkapsulasi Melalui Implementasi Berbagai Kelas dalam Dart</p>
         </div>
 
         <!-- Proyek 1: Kelas Buku -->
         <div class="project-section">
             <div class="project-title">1. Kelas Buku</div>
+
             <div class="project-explain">
-                <strong>Penjelasan:</strong> Kelas Buku dengan parameterized constructor yang menerima judul dan menampilkannya.
+                <strong>Penjelasan Kelas:</strong> Kelas ini merepresentasikan objek buku dengan atribut
+                <code>judul</code>. Constructor digunakan untuk memberikan nilai judul saat objek dibuat.
             </div>
+
             <div class="project-fix">
-                <strong>Perbaikan:</strong> Perbaiki penulisan syntax kelas & atribut agar tampil sesuai.
+                <strong>Perbaikan:</strong> Penulisan class harus <code>class Buku</code> dan
+                atribut <code>String judul</code>.
             </div>
+
             <div class="iframe-container">
+                <p><strong>Hasil Program:</strong></p>
                 <iframe src="https://dartpad.dev/embed-dart.html?id=056d061cc804d29d607438659ed9a9c3&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 2: Kelas Mobil -->
+        <!-- Proyek 2 -->
         <div class="project-section">
             <div class="project-title">2. Kelas Mobil</div>
+
+            <div class="project-explain">
+                Kelas mobil memiliki atribut <code>merk</code> dan <code>tahun</code>.
+                Menggunakan parameterized constructor dan named constructor.
+            </div>
+
             <div class="iframe-container">
                 <iframe src="https://dartpad.dev/embed-dart.html?id=eaa6e952fc5325681f67ce2bcd308aad&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 3: Kelas Warna -->
+        <!-- Proyek 3 -->
         <div class="project-section">
             <div class="project-title">3. Kelas Warna</div>
+
+            <div class="project-explain">
+                Kelas ini menggunakan <code>const constructor</code> dengan atribut
+                final r, g, b sehingga objek tidak dapat diubah setelah dibuat.
+            </div>
+
             <div class="iframe-container">
                 <iframe src="https://dartpad.dev/embed-dart.html?id=f5759a3a30cb612f0b8cd549cd88c081&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 4: Kelas Titik -->
+        <!-- Proyek 4 -->
         <div class="project-section">
             <div class="project-title">4. Kelas Titik</div>
+
+            <div class="project-explain">
+                Constructor menggunakan initializer list untuk memproses nilai sebelum objek dibuat.
+            </div>
+
             <div class="iframe-container">
                 <iframe src="https://dartpad.dev/embed-dart.html?id=9d9b0215d693fc33074424a4e58b8702&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 5: Kelas Mahasiswa -->
+        <!-- Proyek 5 -->
         <div class="project-section">
             <div class="project-title">5. Kelas Mahasiswa</div>
+
+            <div class="project-explain">
+                Memiliki constructor default dan named constructor dariMap untuk membuat objek mahasiswa.
+            </div>
+
             <div class="iframe-container">
                 <iframe src="https://dartpad.dev/embed-dart.html?id=8c6acae69db363da2503c843832d411a&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 6: Kelas Person -->
+        <!-- Proyek 6 -->
         <div class="project-section">
             <div class="project-title">6. Kelas Person</div>
+
+            <div class="project-explain">
+                Menerapkan konsep enkapsulasi menggunakan atribut private
+                <code>_name</code> dengan getter dan setter.
+            </div>
+
             <div class="iframe-container">
                 <iframe src="https://dartpad.dev/embed-dart.html?id=102fa38e3de419aa9ee98b46a6f9b45b&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 7: Kelas Produk -->
+        <!-- Proyek 7 -->
         <div class="project-section">
             <div class="project-title">7. Kelas Produk</div>
+
+            <div class="project-explain">
+                Menggunakan atribut private dan setter dengan validasi
+                nama minimal 3 karakter dan harga harus lebih dari 0.
+            </div>
+
             <div class="iframe-container">
                 <iframe src="https://dartpad.dev/embed-dart.html?id=39aa53c68684946d3f684c9ec5dde5ed&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 8: Kelas User -->
+        <!-- Proyek 8 -->
         <div class="project-section">
             <div class="project-title">8. Kelas User</div>
+
+            <div class="project-explain">
+                Kelas user menggunakan enkapsulasi untuk username, password dan email
+                dengan validasi tertentu.
+            </div>
+
             <div class="iframe-container">
                 <iframe src="https://dartpad.dev/embed-dart.html?id=30d6287a075646af8cea033b32f90137&split=60&theme=dark&run=true"></iframe>
             </div>
         </div>
 
-        <!-- Proyek 9: Kelas RekeningBank -->
+        <!-- Proyek 9 -->
         <div class="project-section">
             <div class="project-title">9. Kelas RekeningBank</div>
+
+            <div class="project-explain">
+                Kelas ini mengelola data rekening bank dengan atribut private
+                <code>_nomorRekening</code>, <code>_saldo</code>, dan <code>_pemilik</code>.
+                Metode setor dan tarik digunakan untuk mengelola saldo.
+            </div>
+
             <div class="iframe-container">
-                <iframe src="https://dartpad.dev/embed-dart.html?id=dc7b26a3a6a87a533fc030310712dbd0&split=60&theme=dark&run=true"></iframe>
+                <iframe src="https://dartpad.dev/embed-dart.html"></iframe>
             </div>
         </div>
 
         <!-- Kesimpulan -->
         <div class="conclusion">
             <h2>Kesimpulan</h2>
-            <p>Pembelajaran ini menunjukkan penerapan konsep <strong>constructor</strong> dan <strong>enkapsulasi</strong> dalam pemrograman Dart melalui implementasi berbagai kelas. <strong>Constructor</strong> mempermudah inisialisasi objek dengan nilai awal, sedangkan <strong>enkapsulasi</strong> melindungi data internal kelas dengan atribut private yang hanya bisa diakses melalui getter dan setter dengan validasi. Kombinasi kedua konsep membuat program lebih terstruktur, aman, dan mudah dikelola.</p>
+            <p>
+                Constructor digunakan untuk menginisialisasi objek ketika dibuat.
+                Enkapsulasi digunakan untuk melindungi data dengan membuat atribut private
+                serta menyediakan getter dan setter untuk mengaksesnya.
+            </p>
         </div>
 
     </div>
