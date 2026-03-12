@@ -3,196 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kelas dalam Dart</title>
+<title>Constructor & Enkapsulasi - Yoza Ulpia Rafila</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif;}
 body { background:#f5f7fa; padding:15px; line-height:1.6;}
 .container { max-width:800px; margin:0 auto; background:white; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
-h1 { color:#0055b3; margin-bottom:20px; padding-bottom:10px; border-bottom:2px solid #0066cc;}
+h1 { color:#0055b3; margin-bottom:20px; padding-bottom:10px; border-bottom:2px solid #0066cc; text-align:center;}
+.profile { text-align:center; margin-bottom:30px; background:#e6f2ff; padding:15px; border-radius:4px;}
 .project-section { margin-bottom:30px; padding:15px; border-left:4px solid #0066cc; background:#f8fcff; border-radius:4px;}
 .project-title { color:#004499; font-size:1.5rem; margin-bottom:15px;}
 .desc-box { background:#e8f4f8; padding:10px; border-radius:4px; margin-bottom:10px;}
-/* Ubah warna status menjadi hijau karena kode sudah benar */
-.status-box { background:#d4edda; padding:10px; border-radius:4px; margin-bottom:15px; border-left:3px solid #28a745;}
 .btn-show { background:#0066cc; color:white; border:none; padding:8px 15px; border-radius:4px; cursor:pointer; margin-bottom:15px;}
 .btn-show:hover { background:#0055b3;}
 .iframe-container { border:2px solid #0066cc; border-radius:4px; background:white; overflow:hidden;}
 iframe { width:100%; height:400px; border:none; display:none;}
+.conclusion { background:#e6f2ff; padding:20px; border-radius:8px; border:1px solid #0066cc; margin-top:40px;}
+.conclusion h2 { text-align:center; color:#004499; margin-bottom:15px;}
+.conclusion ul { margin-left:20px;}
 </style>
 </head>
 <body>
-<div class="container">
-<h1>Kelas dalam Dart</h1>
 
-<!-- Kelas Buku -->
+<div class="container">
+
+<h1>IMPLEMENTASI CONSTRUCTOR DAN ENKAPSULASI PADA PEMROGRAMAN DART</h1>
+
+<div class="profile">
+    <p><strong>Nama:</strong> Yoza Ulpia Rafila</p>
+    <p><strong>NIM:</strong> 251410004</p>
+    <p><strong>Kelas:</strong> SI2A</p>
+</div>
+
+<!-- Proyek 1: Kelas Buku -->
 <div class="project-section">
     <div class="project-title">1. Kelas Buku</div>
     <div class="desc-box">
-        <strong>Penjelasan Kelas:</strong><br>
-        Merepresentasikan buku dengan atribut judul.<br>
-        Menggunakan parameterized constructor untuk inisialisasi objek saat dibuat.
-    </div>
-    <div class="status-box">
-        <strong>Status / Perbaikan:</strong><br>
-        Kode sudah benar, menampilkan judul buku.
+        Merepresentasikan buku dengan atribut <code>judul</code> menggunakan <strong>parameterized constructor</strong> untuk inisialisasi objek.
     </div>
     <button class="btn-show" onclick="toggleIframe('iframeBuku')">Tampilkan Kode</button>
     <div class="iframe-container">
-        <!-- URL yang benar untuk Kelas Buku -->
         <iframe id="iframeBuku" src="https://dartpad.dev/embed-dart.html?id=056d061cc804d29d607438659ed9a9c3&split=60&theme=dark&run=true"></iframe>
     </div>
 </div>
 
-<!-- Kelas Mobil -->
+<!-- Proyek 2: Kelas Mobil -->
 <div class="project-section">
     <div class="project-title">2. Kelas Mobil</div>
     <div class="desc-box">
-        <strong>Penjelasan Kelas:</strong><br>
-        Merepresentasikan mobil dengan atribut merk dan tahun.<br>
-        Memiliki parameterized constructor, named constructor <code>baru()</code> dan <code>dariJson()</code>.
-    </div>
-    <div class="status-box">
-        <strong>Status / Perbaikan:</strong><br>
-        Kode sudah benar, menampilkan detail data mobil.
+        Merepresentasikan mobil dengan atribut <code>merk</code> dan <code>tahun</code>. Memiliki parameterized constructor, named constructor <code>baru()</code> dan <code>dariJson()</code>.
     </div>
     <button class="btn-show" onclick="toggleIframe('iframeMobil')">Tampilkan Kode</button>
     <div class="iframe-container">
-        <!-- URL yang benar untuk Kelas Mobil -->
         <iframe id="iframeMobil" src="https://dartpad.dev/embed-dart.html?id=eaa6e952fc5325681f67ce2bcd308aad&split=60&theme=dark&run=true"></iframe>
     </div>
 </div>
 
-<!-- Kelas Warna -->
+<!-- Proyek 3: Kelas Warna -->
 <div class="project-section">
     <div class="project-title">3. Kelas Warna</div>
     <div class="desc-box">
-        <strong>Penjelasan Kelas:</strong><br>
-        Merepresentasikan warna dengan atribut RGB.<br>
-        Menggunakan constant constructor untuk membuat objek immutable.
-    </div>
-    <div class="status-box">
-        <strong>Status / Perbaikan:</strong><br>
-        Kode sudah benar, menampilkan nilai komponen warna.
+        Merepresentasikan warna dengan atribut RGB menggunakan <strong>constant constructor</strong> untuk membuat objek immutable.
     </div>
     <button class="btn-show" onclick="toggleIframe('iframeWarna')">Tampilkan Kode</button>
     <div class="iframe-container">
-        <!-- URL yang benar untuk Kelas Warna -->
         <iframe id="iframeWarna" src="https://dartpad.dev/embed-dart.html?id=f5759a3a30cb612f0b8cd549cd88c081&split=60&theme=dark&run=true"></iframe>
     </div>
 </div>
 
-<!-- Kelas Titik -->
+<!-- Proyek 4: Kelas Titik -->
 <div class="project-section">
     <div class="project-title">4. Kelas Titik</div>
     <div class="desc-box">
-        <strong>Penjelasan Kelas:</strong><br>
-        Merepresentasikan koordinat dengan atribut x dan y.<br>
-        Menggunakan initializer list untuk memproses nilai sebelum objek dibuat.
-    </div>
-    <div class="status-box">
-        <strong>Status / Perbaikan:</strong><br>
-        Kode sudah benar, menampilkan koordinat positif.
+        Merepresentasikan koordinat dengan atribut <code>x</code> dan <code>y</code>, menggunakan initializer list untuk memproses nilai sebelum objek dibuat.
     </div>
     <button class="btn-show" onclick="toggleIframe('iframeTitik')">Tampilkan Kode</button>
     <div class="iframe-container">
-        <!-- URL yang benar untuk Kelas Titik -->
         <iframe id="iframeTitik" src="https://dartpad.dev/embed-dart.html?id=9d9b0215d693fc33074424a4e58b8702&split=60&theme=dark&run=true"></iframe>
     </div>
 </div>
 
-<!-- Kelas Mahasiswa -->
+<!-- Proyek 5: Kelas Mahasiswa -->
 <div class="project-section">
     <div class="project-title">5. Kelas Mahasiswa</div>
     <div class="desc-box">
-        <strong>Penjelasan Kelas:</strong><br>
-        Merepresentasikan data mahasiswa dengan atribut nama, NIM, jurusan, dan kelas.<br>
-        Memiliki default constructor dan named constructor <code>dariMap()</code> serta <code>tanpaNama()</code>.
-    </div>
-    <div class="status-box">
-        <strong>Status / Perbaikan:</strong><br>
-        Kode sudah benar, menampilkan detail informasi mahasiswa.
+        Merepresentasikan data mahasiswa dengan atribut <code>nama</code>, <code>nim</code>, <code>jurusan</code>, dan <code>kelas</code>. Memiliki default constructor dan named constructor <code>dariMap()</code> serta <code>tanpaNama()</code>.
     </div>
     <button class="btn-show" onclick="toggleIframe('iframeMahasiswa')">Tampilkan Kode</button>
     <div class="iframe-container">
-        <!-- URL yang benar untuk Kelas Mahasiswa -->
         <iframe id="iframeMahasiswa" src="https://dartpad.dev/embed-dart.html?id=8c6acae69db363da2503c843832d411a&split=60&theme=dark&run=true"></iframe>
     </div>
 </div>
 
-<!-- Kelas Person -->
+<!-- Proyek 6: Kelas Person -->
 <div class="project-section">
     <div class="project-title">6. Kelas Person</div>
     <div class="desc-box">
-        <strong>Penjelasan Kelas:</strong><br>
-        Merepresentasikan individu dengan atribut nama dan umur.<br>
-        Menerapkan enkapsulasi dengan getter dan setter untuk atribut private.
-    </div>
-    <div class="status-box">
-        <strong>Status / Perbaikan:</strong><br>
-        Kode sudah benar, menampilkan perubahan data nama.
+        Merepresentasikan individu dengan atribut <code>nama</code> dan <code>umur</code>, menerapkan enkapsulasi dengan getter dan setter untuk atribut private.
     </div>
     <button class="btn-show" onclick="toggleIframe('iframePerson')">Tampilkan Kode</button>
     <div class="iframe-container">
-        <!-- URL yang benar untuk Kelas Person -->
         <iframe id="iframePerson" src="https://dartpad.dev/embed-dart.html?id=102fa38e3de419aa9ee98b46a6f9b45b&split=60&theme=dark&run=true"></iframe>
     </div>
 </div>
 
-<!-- Kelas Produk -->
+<!-- Proyek 7: Kelas Produk -->
 <div class="project-section">
     <div class="project-title">7. Kelas Produk</div>
     <div class="desc-box">
-        <strong>Penjelasan Kelas:</strong><br>
-        Merepresentasikan barang dengan atribut nama dan harga.<br>
-        Menerapkan enkapsulasi dengan validasi pada setter.
-    </div>
-    <div class="status-box">
-        <strong>Status / Perbaikan:</strong><br>
-        Kode sudah benar setelah memperbaiki operator >=, menampilkan validasi data.
+        Merepresentasikan barang dengan atribut <code>nama</code> dan <code>harga</code>, menerapkan enkapsulasi dengan validasi pada setter.
     </div>
     <button class="btn-show" onclick="toggleIframe('iframeProduk')">Tampilkan Kode</button>
     <div class="iframe-container">
-        <!-- URL yang benar untuk Kelas Produk -->
         <iframe id="iframeProduk" src="https://dartpad.dev/embed-dart.html?id=39aa53c68684946d3f684c9ec5dde5ed&split=60&theme=dark&run=true"></iframe>
     </div>
 </div>
 
-<!-- Kelas User -->
+<!-- Proyek 8: Kelas User -->
 <div class="project-section">
     <div class="project-title">8. Kelas User</div>
     <div class="desc-box">
-        <strong>Penjelasan Kelas:</strong><br>
-        Merepresentasikan akun dengan atribut username, password, dan email.<br>
-        Menerapkan enkapsulasi dengan metode login dan ganti password.
-    </div>
-    <div class="status-box">
-        <strong>Status / Perbaikan:</strong><br>
-        Kode sudah benar setelah memperbaiki operator >=, menampilkan hasil validasi akun.
+        Merepresentasikan akun dengan atribut username, password, dan email, menerapkan enkapsulasi dengan metode login dan ganti password.
     </div>
     <button class="btn-show" onclick="toggleIframe('iframeUser')">Tampilkan Kode</button>
     <div class="iframe-container">
-        <!-- URL yang benar untuk Kelas User -->
         <iframe id="iframeUser" src="https://dartpad.dev/embed-dart.html?id=30d6287a075646af8cea033b32f90137&split=60&theme=dark&run=true"></iframe>
     </div>
 </div>
 
-<!-- Kelas RekeningBank -->
+<!-- Proyek 9: Kelas RekeningBank -->
 <div class="project-section">
     <div class="project-title">9. Kelas RekeningBank</div>
     <div class="desc-box">
-        <strong>Penjelasan Kelas:</strong><br>
-        Merepresentasikan rekening dengan atribut nomor rekening dan saldo.<br>
-        Menerapkan enkapsulasi dengan metode deposit dan tarik tunai.
-    </div>
-    <div class="status-box">
-        <strong>Status / Perbaikan:</strong><br>
-        Kode sudah benar setelah memperbaiki operator >=, menampilkan hasil transaksi.
+        Merepresentasikan rekening dengan atribut nomor rekening dan saldo, menerapkan enkapsulasi dengan metode deposit dan tarik tunai.
     </div>
     <button class="btn-show" onclick="toggleIframe('iframeRekening')">Tampilkan Kode</button>
     <div class="iframe-container">
-        <!-- URL yang benar untuk Kelas RekeningBank -->
         <iframe id="iframeRekening" src="https://dartpad.dev/embed-dart.html?id=dc7b26a3a6a87a533fc030310712dbd0&split=60&theme=dark&run=true"></iframe>
     </div>
+</div>
+
+<!-- Kesimpulan -->
+<div class="conclusion">
+    <h2>Kesimpulan</h2>
+    <ul>
+        <li><strong>Constructor</strong> memungkinkan pembuatan objek dengan nilai awal spesifik, termasuk parameterized, default, named, dan constant constructor.</li>
+        <li><strong>Enkapsulasi</strong> dengan getter & setter menjaga keamanan data, mencegah akses langsung ke atribut private.</li>
+        <li>Pemakaian constructor dan enkapsulasi membuat kode lebih <em>terstruktur, modular, dan mudah dipelihara</em>.</li>
+        <li>Konsep ini membantu membuat aplikasi Dart yang efektif, aman, dan terorganisir.</li>
+    </ul>
 </div>
 
 </div>
@@ -203,5 +161,6 @@ function toggleIframe(id) {
     iframe.style.display = (iframe.style.display === 'none') ? 'block' : 'none';
 }
 </script>
+
 </body>
 </html>
